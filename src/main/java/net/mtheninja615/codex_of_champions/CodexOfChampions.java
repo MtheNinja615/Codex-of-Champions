@@ -54,7 +54,7 @@ public class CodexOfChampions
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
+        // Register the net.mtheninja615.codex_of_champions.item to a creative tab
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
@@ -74,7 +74,7 @@ public class CodexOfChampions
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
-    // Add the example block item to the building blocks tab
+    // Add the example block net.mtheninja615.codex_of_champions.item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
 

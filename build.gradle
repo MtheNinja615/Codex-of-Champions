@@ -161,7 +161,7 @@ dependencies {
     //localRuntime "curse.maven:just-enough-effect-descriptions-jeed-532286:4599099")
 
     // CURIOS *****************************************************************************************************
-    implementation "curse.maven:curios-309927:6274154"
+    implementation "curse.maven:net.mtheninja615.codex_of_champions.item.curios-309927:6274154"
 
 }
 

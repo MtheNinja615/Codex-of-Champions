@@ -1,5 +1,6 @@
 package net.mtheninja615.codex_of_champions;
 
+import net.mtheninja615.codex_of_champions.Registries.ItemRegistries;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -54,6 +55,8 @@ public class CodexOfChampions
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ItemRegistries.register(modEventBus);
+
         // Register the net.mtheninja615.codex_of_champions.item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -82,6 +85,8 @@ public class CodexOfChampions
 //creative mode tabs register
     //ModCreativeModeTabs.register(modEventBus);
     // You can use SubscribeEvent and let the Event Bus discover methods to call
+    //Item Regestry Register
+
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {

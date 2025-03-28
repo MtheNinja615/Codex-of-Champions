@@ -23,5 +23,5 @@ public class ItemRegistries {
      */
 
     // Flowering Pendant
-    public static final Supplier<CurioBaseItem> Flowering_Pendant = ITEMS.register("flowering_pendant", FloweringPendantCurio::new);
+    public static final Supplier<CurioBaseItem> FLOWERING_PENDANT = ITEMS.register("flowering_pendant", FloweringPendantCurio::new);
 }

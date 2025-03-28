@@ -79,7 +79,8 @@ public class CodexOfChampions
     {
 
     }
-
+//creative mode tabs register
+    //ModCreativeModeTabs.register(modEventBus);
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)

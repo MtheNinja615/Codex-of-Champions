@@ -19,7 +19,7 @@ public class CreativeModeTabs {
                     .title(Component.translatable("creativetab.codex_of_champions.codex_of_champions"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ItemRegistries.FLOWERING_PENDANT.get());
-
+                        output.accept(ItemRegistries.CRYSTAL_CLAYMORE.get());
 
                     })
             .build());

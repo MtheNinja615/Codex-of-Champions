@@ -24,7 +24,7 @@ public class TrueFirewardRingCurio extends CurioBaseItem {
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {
         Multimap<Holder<Attribute>, AttributeModifier> attr = LinkedHashMultimap.create();
         //The attributes of the curio
-        attr.put(AttributeRegistry.FIRE_MAGIC_RESIST, new AttributeModifier(id, 0.5, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+        attr.put(AttributeRegistry.FIRE_MAGIC_RESIST, new AttributeModifier(id, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
         return attr;
     }

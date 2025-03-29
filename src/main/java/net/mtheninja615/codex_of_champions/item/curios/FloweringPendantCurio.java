@@ -4,6 +4,7 @@ import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.compat.Curios;
+import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 import io.redspace.ironsspellbooks.item.curios.SimpleDescriptiveCurio;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.minecraft.core.Holder;
@@ -14,9 +15,9 @@ import net.minecraft.world.item.ItemStack;
 import top.theillusivec4.curios.api.SlotContext;
 
 //Class Setup
-    public class FloweringPendantCurio extends SimpleDescriptiveCurio {
+    public class FloweringPendantCurio extends CurioBaseItem {
         public FloweringPendantCurio() {
-            super(ItemPropertiesHelper.equipment().stacksTo(1).fireResistant(), Curios.NECKLACE_SLOT );
+            super(ItemPropertiesHelper.equipment().stacksTo(1).fireResistant() );
         }
 //uhhhhhhhhhhhhhhh idk what this does I just looked at the DTE Github
         @Override

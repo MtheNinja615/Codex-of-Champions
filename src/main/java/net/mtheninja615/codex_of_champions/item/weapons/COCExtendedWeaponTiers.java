@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.Block;
 import java.util.function.Supplier;
 
 public class COCExtendedWeaponTiers implements Tier, IronsWeaponTier {
-    // Crystal Claymore
+    //  Crystal Claymore
     public static COCExtendedWeaponTiers CRYSTAL_CLAYMORE = new COCExtendedWeaponTiers(14000, 12, -3.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistry.MITHRIL_INGOT.get()),
             new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 

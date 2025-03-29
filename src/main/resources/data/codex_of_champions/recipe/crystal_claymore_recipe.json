@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#E#",
+        "#D#",
+        " Y "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:emerald"
+        },
+        "E": {
+            "item": "minecraft:emerald_block"
+        },
+        "D": {
+            "item": "irons_spellbooks:divine_soulshard"
+        },
+        "Y": {
+            "item": "irons_spellbooks:weapon_parts"
+        }
+    },
+    "result": {
+        "id": "codex_of_champions:crystal_claymore",
+        "count": 1
+    }
+}

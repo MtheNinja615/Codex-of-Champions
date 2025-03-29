@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "E",
+    "DED",
+    "YDY"
+  ],
+  "key": {
+    "F": {
+      "item": "irons_spellbooks:divine_soulshard"
+    },
+    "E": {
+      "item": "irons_spellbooks:conjurers_talisman"
+    },
+    "D": {
+      "item": "irons_spellbooks:nature_rune"
+    },
+    "Y": {
+      "item": "irons_spellbooks:mithril_bar"
+    }
+  },
+  "result": {
+    "id": "codex_of_champions:flowering_pendant",
+    "count": 1
+  }
+}

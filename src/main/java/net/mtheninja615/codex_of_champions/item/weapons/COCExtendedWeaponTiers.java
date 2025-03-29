@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 
 public class COCExtendedWeaponTiers implements Tier, IronsWeaponTier {
     //  Crystal Claymore
-    public static COCExtendedWeaponTiers CRYSTAL_CLAYMORE = new COCExtendedWeaponTiers(12000, 12, -3.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistry.EVOCATION_RUNE.get()),
+    public static COCExtendedWeaponTiers CRYSTAL_CLAYMORE = new COCExtendedWeaponTiers(12000, 12, -3.2F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistry.EVOCATION_RUNE.get()),
             new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
     //private final int level;

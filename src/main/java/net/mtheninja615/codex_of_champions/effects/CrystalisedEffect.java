@@ -1,4 +1,4 @@
-package net.mtheninja615.codex_of_champions.effects;
+/*package net.mtheninja615.codex_of_champions.effects;
 
 import io.redspace.ironsspellbooks.effect.MagicMobEffect;
 import net.minecraft.core.Holder;
@@ -29,4 +29,4 @@ public class CrystalisedEffect extends MagicMobEffect {
         return super.addAttributeModifier(attribute, id, amount, operation);
     }
 }
-
+*/

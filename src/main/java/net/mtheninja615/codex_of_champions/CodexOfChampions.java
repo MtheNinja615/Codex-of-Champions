@@ -1,8 +1,10 @@
 package net.mtheninja615.codex_of_champions;
 
+import net.minecraft.resources.ResourceLocation;
 import net.mtheninja615.codex_of_champions.Registries.CreativeModeTabs;
 import net.mtheninja615.codex_of_champions.Registries.ItemRegistries;
 import net.mtheninja615.codex_of_champions.item.curios.FloweringPendantCurio;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -64,7 +66,10 @@ public class CodexOfChampions
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
-
+    public static ResourceLocation id(@NotNull String path)
+    {
+        return ResourceLocation.fromNamespaceAndPath(CodexOfChampions.MODID, path);
+    }
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         // Some common setup code

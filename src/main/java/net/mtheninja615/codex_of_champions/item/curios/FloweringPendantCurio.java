@@ -25,7 +25,6 @@ import top.theillusivec4.curios.api.SlotContext;
             Multimap<Holder<Attribute>, AttributeModifier> attr = LinkedHashMultimap.create();
             //The attributes of the curio
             attr.put(AttributeRegistry.NATURE_SPELL_POWER, new AttributeModifier(id, 0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
-            attr.put(AttributeRegistry.BLOOD_MAGIC_RESIST, new AttributeModifier(id, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
             return attr;
          }

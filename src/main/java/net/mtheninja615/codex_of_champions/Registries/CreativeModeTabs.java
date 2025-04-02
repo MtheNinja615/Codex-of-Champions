@@ -20,7 +20,11 @@ public class CreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ItemRegistries.FLOWERING_PENDANT.get());
                         output.accept(ItemRegistries.CRYSTAL_CLAYMORE.get());
-
+                        output.accept(ItemRegistries.TRUEFIREWARDRING.get());
+                        output.accept(ItemRegistries.BLOOD_SOUL_MASK.get());
+                        output.accept(ItemRegistries.BLOOD_SOUL_BOOTS.get());
+                        output.accept(ItemRegistries.BLOOD_SOUL_ROBES.get());
+                        output.accept(ItemRegistries.BLOOD_SOUL_LEGGINGS.get());
                     })
             .build());
 

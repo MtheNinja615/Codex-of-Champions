@@ -2,10 +2,14 @@ package net.mtheninja615.codex_of_champions.Registries;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
+import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
+import io.redspace.ironsspellbooks.item.SpellBook;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
+import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -15,6 +19,7 @@ import net.mtheninja615.codex_of_champions.item.curios.TrueFirewardRingCurio;
 import net.mtheninja615.codex_of_champions.item.weapons.COCExtendedWeaponTiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.mtheninja615.codex_of_champions.CodexOfChampions;
 
@@ -30,6 +35,11 @@ public class ItemRegistries {
         ITEMS.register(eventBus);
     }
 
+    public static final DeferredItem<Item> SOUL_FORGED_INGOT = ITEMS.register("soul_forged_ingot",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> ARCANE_UPGRADE_TEMPLATE = ITEMS.register("arcane_upgrade_template",
+            () -> new Item(new Item.Properties()));
     /***
      * Curios
      */
@@ -55,4 +65,19 @@ public class ItemRegistries {
     public static final DeferredHolder<Item, Item> BLOOD_SOUL_ROBES = ITEMS.register("blood_soul_robes", () -> new BloodSoulArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
     public static final DeferredHolder<Item, Item> BLOOD_SOUL_LEGGINGS = ITEMS.register("blood_soul_leggings", () -> new BloodSoulArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
     public static final DeferredHolder<Item, Item> BLOOD_SOUL_BOOTS = ITEMS.register("blood_soul_boots", () -> new BloodSoulArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+
+    /***
+     * Spellbooks
+     */
+
+// Codex Of Champions
+    public static final DeferredHolder<Item, Item> CODEX_SPELLBOOK = ITEMS.register("codex_of_champions_spellbook", () ->
+            new SpellBook(8).withSpellbookAttributes(
+                    new AttributeContainer(AttributeRegistry.SPELL_POWER, .15F, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                    new AttributeContainer(AttributeRegistry.MAX_MANA, 500, AttributeModifier.Operation.ADD_VALUE),
+                    new AttributeContainer(AttributeRegistry.CASTING_MOVESPEED, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+            ));
+
+
 }

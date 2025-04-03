@@ -1,0 +1,19 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "textures": {
+      "book": "codex_of_champions:item/spell_books/codex_of_champions_spellbook",
+      "particle": "codex_of_champions:item/spell_books/codex_of_champions_spellbook"
+    },
+    "parent": "irons_spellbooks:item/template_spell_book_model"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "codex_of_champions:item/codex_of_champions_item"
+      }
+    }
+    }
+  }

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "#D#",
+    "EEE"
+  ],
+  "key": {
+    "#": {
+      "item": "irons_spellbooks:arcane_ingot"
+    },
+    "E": {
+      "item": "minecraft:soul_sand"
+    },
+    "D": {
+      "item": "irons_spellbooks:blood_upgrade_orb"
+    }
+  },
+  "result": {
+    "id": "codex_of_champions:soul_forged_ingot",
+    "count": 3
+  }
+}

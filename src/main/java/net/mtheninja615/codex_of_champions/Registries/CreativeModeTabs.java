@@ -22,9 +22,12 @@ public class CreativeModeTabs {
                         output.accept(ItemRegistries.CRYSTAL_CLAYMORE.get());
                         output.accept(ItemRegistries.TRUEFIREWARDRING.get());
                         output.accept(ItemRegistries.BLOOD_SOUL_MASK.get());
-                        output.accept(ItemRegistries.BLOOD_SOUL_BOOTS.get());
                         output.accept(ItemRegistries.BLOOD_SOUL_ROBES.get());
                         output.accept(ItemRegistries.BLOOD_SOUL_LEGGINGS.get());
+                        output.accept(ItemRegistries.BLOOD_SOUL_BOOTS.get());
+                        output.accept(ItemRegistries.ARCANE_UPGRADE_TEMPLATE.get());
+                        output.accept(ItemRegistries.CODEX_SPELLBOOK.get());
+                        output.accept(ItemRegistries.SOUL_FORGED_INGOT.get());
                     })
             .build());
 

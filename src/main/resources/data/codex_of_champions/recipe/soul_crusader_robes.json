@@ -1,15 +1,16 @@
+
 {
   "type": "minecraft:smithing_trim",
   "template": {
     "item": "codex_of_champions:arcane_upgrade_template"
   },
   "base": {
-    "item": "irons_spellbooks:conjurers_talisman"
+    "item": "irons_spellbooks:cultist_armor"
   },
   "addition": {
-    "item": "irons_spellbooks:nature_upgrade_orb"
+    "item": "codex_of_champions:soul_forged_ingot"
   },
   "result": {
-    "id": "codex_of_champions:flowering_pendant"
+    "id": "codex_of_champions:blood_soul_robes"
   }
 }

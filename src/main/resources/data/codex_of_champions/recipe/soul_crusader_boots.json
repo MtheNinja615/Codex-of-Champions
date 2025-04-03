@@ -1,0 +1,16 @@
+
+{
+"type": "minecraft:smithing_trim",
+"template": {
+"item": "codex_of_champions:arcane_upgrade_template"
+},
+"base": {
+"item": "irons_spellbooks:cultist_boots"
+},
+"addition": {
+"item": "codex_of_champions:soul_forged_ingot"
+},
+"result": {
+"id": "codex_of_champions:blood_soul_boots"
+}
+}

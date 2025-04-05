@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "YDY",
+    "YEY",
+    "YYY"
+  ],
+  "key": {
+      "E": {
+        "item": "minecraft:netherite_upgrade_smithing_template"
+      },
+      "D": {
+        "item": "irons_spellbooks:divine_soulshard"
+      },
+      "Y": {
+        "item": "irons_spellbooks:arcane_essence"
+      }
+    },
+    "result": {
+      "id": "codex_of_champions:arcane_upgrade_template",
+      "count": 3
+    }
+  }
+}

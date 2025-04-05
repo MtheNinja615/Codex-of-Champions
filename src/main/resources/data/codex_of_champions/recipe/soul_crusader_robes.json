@@ -1,11 +1,11 @@
 
 {
-  "type": "minecraft:smithing_trim",
+  "type": "minecraft:smithing_transform",
   "template": {
     "item": "codex_of_champions:arcane_upgrade_template"
   },
   "base": {
-    "item": "irons_spellbooks:cultist_armor"
+    "item": "irons_spellbooks:cultist_chestplate"
   },
   "addition": {
     "item": "codex_of_champions:soul_forged_ingot"

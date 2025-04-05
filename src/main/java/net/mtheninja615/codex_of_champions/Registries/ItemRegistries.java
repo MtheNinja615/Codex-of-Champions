@@ -57,6 +57,12 @@ public class ItemRegistries {
     public static final DeferredHolder<Item, Item> CRYSTAL_CLAYMORE = ITEMS.register("crystal_claymore", () ->
             new MagicSwordItem(COCExtendedWeaponTiers.CRYSTAL_CLAYMORE, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.CRYSTAL_CLAYMORE)),
                     SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.CHAIN_CREEPER_SPELL, 8))));
+    public static final DeferredHolder<Item, Item> DEATHFIRE_GREATSWORD = ITEMS.register("deathfire_greatsword", () ->
+            new MagicSwordItem(COCExtendedWeaponTiers.DEATHFIRE_GREATSWORD, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.DEATHFIRE_GREATSWORD)),
+                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.FLAMING_STRIKE_SPELL, 7))));
+    public static final DeferredHolder<Item, Item> SOULFIRE_GREATSWORD = ITEMS.register("soulfire_greatsword", () ->
+            new MagicSwordItem(COCExtendedWeaponTiers.SOULFIRE_GREATSWORD, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.SOULFIRE_GREATSWORD)),
+                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.FLAMING_STRIKE_SPELL, 10))));
 
     /***
      * Armor
@@ -73,7 +79,7 @@ public class ItemRegistries {
 
 // Codex Of Champions
     public static final DeferredHolder<Item, Item> CODEX_SPELLBOOK = ITEMS.register("codex_of_champions_spellbook", () ->
-            new SpellBook(8).withSpellbookAttributes(
+            new SpellBook(12).withSpellbookAttributes(
                     new AttributeContainer(AttributeRegistry.SPELL_POWER, .15F, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     new AttributeContainer(AttributeRegistry.MAX_MANA, 500, AttributeModifier.Operation.ADD_VALUE),
                     new AttributeContainer(AttributeRegistry.CASTING_MOVESPEED, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)

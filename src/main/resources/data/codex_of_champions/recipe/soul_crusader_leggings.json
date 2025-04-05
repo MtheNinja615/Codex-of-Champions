@@ -1,6 +1,6 @@
 
 {
-  "type": "minecraft:smithing_trim",
+  "type": "minecraft:smithing_transform",
   "template": {
     "item": "codex_of_champions:arcane_upgrade_template"
   },

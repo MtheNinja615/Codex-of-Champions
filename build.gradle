@@ -163,6 +163,10 @@ dependencies {
     // CURIOS *****************************************************************************************************
     implementation "curse.maven:net.mtheninja615.codex_of_champions.item.curios-309927:6274154"
 
+    // APOTHIC ATTRIBUTES
+    implementation "curse.maven:apothic-attributes-898963:6302334"
+    implementation "curse.maven:placebo-283644:6337156"
+
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

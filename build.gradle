@@ -170,9 +170,10 @@ dependencies {
     // CURIOS *****************************************************************************************************
     implementation "curse.maven:net.mtheninja615.codex_of_champions.item.curios-309927:6274154"
 
-    // Apothic Attributes *****************************************************************************************************
-    implementation "dev.shadowsoffire:ApothicAttributes:${minecraft_version}-${attribute_lib_version}"
-    localRuntime "dev.shadowsoffire:Placebo:${minecraft_version}-${placebo_version}"
+    // APOTHIC ATTRIBUTES
+    implementation "curse.maven:apothic-attributes-898963:6302334"
+    implementation "curse.maven:placebo-283644:6337156"
+
 
 }
 

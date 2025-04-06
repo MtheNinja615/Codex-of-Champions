@@ -40,6 +40,13 @@ repositories {
             includeGroup("software.bernie.geckolib")
         }
     }
+    maven {
+        // Shadows (Attribute Lib)
+        url "https://maven.shadowsoffire.dev/releases"
+        content {
+            includeGroup "dev.shadowsoffire"
+        }
+    }
     maven { url = "https://maven.theillusivec4.top" }
     maven { url = "https://cursemaven.com" }
     maven { url = "https://maven.blamejared.com" }
@@ -162,6 +169,10 @@ dependencies {
 
     // CURIOS *****************************************************************************************************
     implementation "curse.maven:net.mtheninja615.codex_of_champions.item.curios-309927:6274154"
+
+    // Apothic Attributes *****************************************************************************************************
+    implementation "dev.shadowsoffire:ApothicAttributes:${minecraft_version}-${attribute_lib_version}"
+    localRuntime "dev.shadowsoffire:Placebo:${minecraft_version}-${placebo_version}"
 
 }
 

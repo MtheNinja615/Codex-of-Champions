@@ -40,6 +40,13 @@ repositories {
             includeGroup("software.bernie.geckolib")
         }
     }
+    maven {
+        // Shadows (Attribute Lib)
+        url "https://maven.shadowsoffire.dev/releases"
+        content {
+            includeGroup "dev.shadowsoffire"
+        }
+    }
     maven { url = "https://maven.theillusivec4.top" }
     maven { url = "https://cursemaven.com" }
     maven { url = "https://maven.blamejared.com" }
@@ -166,6 +173,7 @@ dependencies {
     // APOTHIC ATTRIBUTES
     implementation "curse.maven:apothic-attributes-898963:6302334"
     implementation "curse.maven:placebo-283644:6337156"
+
 
 }
 

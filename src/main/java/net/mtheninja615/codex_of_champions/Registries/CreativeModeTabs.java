@@ -28,6 +28,8 @@ public class CreativeModeTabs {
                         output.accept(ItemRegistries.ARCANE_UPGRADE_TEMPLATE.get());
                         output.accept(ItemRegistries.CODEX_SPELLBOOK.get());
                         output.accept(ItemRegistries.SOUL_FORGED_INGOT.get());
+                        output.accept(ItemRegistries.SOULFIRE_GREATSWORD.get());
+                        output.accept(ItemRegistries.DEATHFIRE_GREATSWORD.get());
                     })
             .build());
 

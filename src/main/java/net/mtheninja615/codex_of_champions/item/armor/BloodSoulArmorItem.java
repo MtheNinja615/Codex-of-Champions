@@ -16,7 +16,6 @@ public class BloodSoulArmorItem extends ImbuableModArmorItem {
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 200.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.CASTING_MOVESPEED, .05, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.HOLY_MAGIC_RESIST, .05, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, .10, AttributeModifier.Operation.ADD_VALUE)
         );
     }

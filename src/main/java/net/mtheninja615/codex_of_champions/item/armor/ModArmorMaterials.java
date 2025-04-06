@@ -29,6 +29,15 @@ public class ModArmorMaterials {
                 attribute.put(ArmorItem.Type.BODY, 12);
             }), 16, 2f, 0.1f, () -> ItemRegistry.MITHRIL_INGOT.get());
 
+    public static final Holder<ArmorMaterial> WARDEN_HUNTER_MATERIAL = register("warden_hunter",
+            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
+                attribute.put(ArmorItem.Type.BOOTS, 6);
+                attribute.put(ArmorItem.Type.LEGGINGS, 8);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 10);
+                attribute.put(ArmorItem.Type.HELMET, 6);
+                attribute.put(ArmorItem.Type.BODY, 12);
+            }), 16, 2f, 0.1f, () -> ItemRegistry.MITHRIL_INGOT.get());
+
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
                                                   int enchantability, float toughness, float knockbackResistance,
                                                   Supplier<Item> ingredientItem) {

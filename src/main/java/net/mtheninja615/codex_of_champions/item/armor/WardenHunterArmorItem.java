@@ -1,5 +1,6 @@
 package net.mtheninja615.codex_of_champions.item.armor;
 
+import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.entity.armor.GenericCustomArmorRenderer;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
@@ -16,7 +17,7 @@ public class WardenHunterArmorItem extends ImbuableModArmorItem {
         super(ModArmorMaterials.WARDEN_HUNTER_MATERIAL, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 200.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.ELDRITCH_MAGIC_RESIST, .15, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE)
+                new AttributeContainer(ALObjects.Attributes.CRIT_DAMAGE, 0.05, AttributeModifier.Operation.ADD_VALUE)
         );
     }
 

@@ -23,5 +23,11 @@
 
   "item.codex_of_champions.soulfire_greatsword": "Soulfire Greatsword",
 
-  "item.codex_of_champions.deathfire_greatsword": "Deathfire Greatsword"
+  "item.codex_of_champions.deathfire_greatsword": "Deathfire Greatsword",
+
+  "item.codex_of_champions.vampiric_charm" : "Vampiric Charm",
+
+  "curios.identifier.arcane_trinket" : "Arcane Trinket",
+
+  "curios.modifiers.arcane_trinket" : "When worn as Arcane Trinket:"
 }

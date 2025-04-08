@@ -1,0 +1,9 @@
+{
+  "order": 2000,
+  "size": 3,
+  "icon": "codex_of_champions:slot/arcane_trinket_slot",
+  "add_cosmetic": false,
+  "operation": "SET",
+  "render_toggle": true,
+  "drop_rule": "DEFAULT"
+}

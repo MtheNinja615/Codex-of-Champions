@@ -1,6 +1,11 @@
 {
   "replace": false,
-  "values" :[
-    "codex_of_champions:vampiric_charm"
+  "values" : [
+    "codex_of_champions:vampiric_charm",
+    "codex_of_champions:flowering_pendant",
+    "codex_of_champions:chaos_orb",
+    "codex_of_champions:azure_anlace",
+    "codex_of_champions:royal_rose",
+    "codex_of_champions:royal_anlace"
   ]
 }

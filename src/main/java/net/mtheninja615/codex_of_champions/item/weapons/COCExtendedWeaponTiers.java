@@ -21,13 +21,15 @@ public class COCExtendedWeaponTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
     //  Soulfire Greatsword
     public static COCExtendedWeaponTiers SOULFIRE_GREATSWORD = new COCExtendedWeaponTiers(12000, 10, -3.0F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.SOUL_FORGED_INGOT.get()),
-            new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+            new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(ALObjects.Attributes.OVERHEAL, 0.125, AttributeModifier.Operation.ADD_VALUE)
+            );
 
     //  Soulfire Greatsword
     public static COCExtendedWeaponTiers DEATHFIRE_GREATSWORD = new COCExtendedWeaponTiers(16000, 10, -3.0F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.SOUL_FORGED_INGOT.get()),
             new AttributeContainer(AttributeRegistry.ELDRITCH_MAGIC_RESIST, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-            new AttributeContainer(ALObjects.Attributes.LIFE_STEAL, 0.05, AttributeModifier.Operation.ADD_VALUE)
+            new AttributeContainer(ALObjects.Attributes.OVERHEAL, 0.25, AttributeModifier.Operation.ADD_VALUE)
     );
 
     //private final int level;

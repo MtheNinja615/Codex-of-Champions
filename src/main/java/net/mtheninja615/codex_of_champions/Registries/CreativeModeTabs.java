@@ -30,6 +30,11 @@ public class CreativeModeTabs {
                         output.accept(ItemRegistries.SOUL_FORGED_INGOT.get());
                         output.accept(ItemRegistries.SOULFIRE_GREATSWORD.get());
                         output.accept(ItemRegistries.DEATHFIRE_GREATSWORD.get());
+                        output.accept(ItemRegistries.AzureAnlaceCurio.get());
+                        output.accept(ItemRegistries.CHAOSORBCURIO.get());
+                        output.accept(ItemRegistries.VAMPIRICCHARMCURIO.get());
+                        output.accept(ItemRegistries.ROYALROSECURIO.get());
+                        output.accept(ItemRegistries.ROYALANLACECURIO.get());
                     })
             .build());
 

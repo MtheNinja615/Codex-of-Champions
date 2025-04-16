@@ -29,5 +29,19 @@
 
   "curios.identifier.arcane_trinket" : "Arcane Trinket",
 
-  "curios.modifiers.arcane_trinket" : "When worn as Arcane Trinket:"
+  "curios.modifiers.arcane_trinket" : "When worn as Arcane Trinket:",
+
+  "item.codex_of_champions.chaos_orb" : "Chaos Orb",
+
+  "item.codex_of_champions.azure_anlace" : "Azure Anlace",
+
+  "item.codex_of_champions.royal_rose" : "Royal Rose",
+
+  "item.codex_of_champions.royal_anlace" : "Eternally Bonded Relics",
+
+  "item.codex_of_champions.royal_anlace.desc" : "One could not exist without the other",
+
+  "item.codex_of_champions.royal_rose.desc" : "Perhaps it could forge an eternal bond",
+
+  "item.codex_of_champions.azure_anlace.desc" : "It could possibly forge an eternal bond"
 }

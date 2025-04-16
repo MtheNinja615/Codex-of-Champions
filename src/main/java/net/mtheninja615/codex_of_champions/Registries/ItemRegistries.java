@@ -15,9 +15,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.mtheninja615.codex_of_champions.item.armor.BloodSoulArmorItem;
 import net.mtheninja615.codex_of_champions.item.armor.WardenHunterArmorItem;
-import net.mtheninja615.codex_of_champions.item.curios.FloweringPendantCurio;
-import net.mtheninja615.codex_of_champions.item.curios.TrueFirewardRingCurio;
-import net.mtheninja615.codex_of_champions.item.curios.VampiricCharmCurio;
+import net.mtheninja615.codex_of_champions.item.curios.*;
 import net.mtheninja615.codex_of_champions.item.weapons.COCExtendedWeaponTiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -52,7 +50,14 @@ public class ItemRegistries {
     public static final Supplier<CurioBaseItem> TRUEFIREWARDRING = ITEMS.register("true_fireward_ring", TrueFirewardRingCurio::new);
     // Vampiric Charm
     public static final Supplier<CurioBaseItem> VAMPIRICCHARMCURIO = ITEMS.register("vampiric_charm", VampiricCharmCurio::new);
-
+    // Chaos Orb
+    public static final Supplier<CurioBaseItem> CHAOSORBCURIO = ITEMS.register("chaos_orb", ChaosOrbCurio::new);
+    // Azure Anlace
+    public static final Supplier<CurioBaseItem> AzureAnlaceCurio = ITEMS.register("azure_anlace", AzureAnlaceCurio::new);
+    // Royal Rose
+    public static final Supplier<CurioBaseItem> ROYALROSECURIO = ITEMS.register("royal_rose", RoyalRoseCurio::new);
+    //
+    public static final Supplier<CurioBaseItem> ROYALANLACECURIO = ITEMS.register("royal_anlace", RoyalAnlaceCurio::new);
     /***
      * Weapons
      */

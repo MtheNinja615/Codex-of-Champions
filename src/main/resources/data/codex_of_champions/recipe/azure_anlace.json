@@ -4,12 +4,12 @@
     "item": "codex_of_champions:arcane_upgrade_template"
   },
   "base": {
-    "item": "irons_spellbooks:conjurers_talisman"
+    "item": "minecraft:diamond_sword"
   },
   "addition": {
-    "item": "codex_of_champions:gaia_fruit"
+    "item": "codex_of_champions:divine_star"
   },
   "result": {
-    "id": "codex_of_champions:flowering_pendant"
+    "id": "codex_of_champions:azure_anlace"
   }
 }

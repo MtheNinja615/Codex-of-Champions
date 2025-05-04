@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#E#",
+    "#D#",
+    " Y "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:echo_shard"
+    },
+    "E": {
+      "item": "codex_of_champions:soul_forged_ingot"
+    },
+    "D": {
+      "item": "codex_of_champions:sculk_rib"
+    },
+    "Y": {
+      "item": "codex_of_champions:soulfire_greatsword"
+    }
+  },
+  "result": {
+    "id": "codex_of_champions:deathfire_greatsword",
+    "count": 1
+  }
+}

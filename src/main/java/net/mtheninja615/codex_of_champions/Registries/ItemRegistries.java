@@ -34,11 +34,40 @@ public class ItemRegistries {
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
-
+    /***
+     * Crafting Stuff
+     */
     public static final DeferredItem<Item> SOUL_FORGED_INGOT = ITEMS.register("soul_forged_ingot",
             () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> ARCANE_UPGRADE_TEMPLATE = ITEMS.register("arcane_upgrade_template",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> BLAZE_CORE = ITEMS.register("blaze_core",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> DIVINE_STAR = ITEMS.register("divine_star",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> ELECTRIFIED_BRONZE = ITEMS.register("electrified_bronze",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> ETERNAL_ICE = ITEMS.register("eternal_ice",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> GAIA_FRUIT = ITEMS.register("gaia_fruit",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> REINFORCED_ENDER_EYE = ITEMS.register("reinforced_ender_eye",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> SCULK_RIB = ITEMS.register("sculk_rib",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> VEXED_PAGE = ITEMS.register("vexed_page",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> WITHER_BONE = ITEMS.register("wither_bone",
             () -> new Item(new Item.Properties()));
     /***
      * Curios

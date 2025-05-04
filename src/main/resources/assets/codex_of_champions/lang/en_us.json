@@ -43,5 +43,31 @@
 
   "item.codex_of_champions.royal_rose.desc" : "Perhaps it could forge an eternal bond",
 
-  "item.codex_of_champions.azure_anlace.desc" : "It could possibly forge an eternal bond"
+  "item.codex_of_champions.azure_anlace.desc" : "It could possibly forge an eternal bond",
+
+  "item.codex_of_champions.blaze_core" : "Blaze Core",
+
+  "item.codex_of_champions.divine_star" : "Divine Star",
+
+  "item.codex_of_champions.electrified_bronze" : "Electrified Bronze",
+
+  "item.codex_of_champions.eternal_ice" : "Eternal Ice",
+
+  "item.codex_of_champions.gaia_fruit" : "Gaia Fruit",
+
+  "item.codex_of_champions.reinforced_ender_eye" : "Reinforced Eye of Ender",
+
+  "item.codex_of_champions.sculk_rib" : "Sculk Rib",
+
+  "item.codex_of_champions.vexed_page" : "Vexed Page",
+
+  "item.codex_of_champions.wither_bone" : "Withered Bone",
+
+  "item.codex_of_champions.warden_hunter_helmet" : "Damascus Helm",
+
+  "item.codex_of_champions.warden_hunter_armor" : "Damascus Brestplate",
+
+  "item.codex_of_champions.warden_hunter_leggings" : "Damascus Greaves",
+
+  "item.codex_of_champions.warden_hunter_boots" : "Damascus Boots"
 }

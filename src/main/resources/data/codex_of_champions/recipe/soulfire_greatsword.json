@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#D#",
+    " Y "
+  ],
+  "key": {
+    "#": {
+      "item": "codex_of_champions:soul_forged_ingot"
+    },
+    "D": {
+      "item": "codex_of_champions:blaze_core"
+    },
+    "Y": {
+      "item": "irons_spellbooks:weapon_parts"
+    }
+  },
+  "result": {
+    "id": "codex_of_champions:soulfire_greatsword",
+    "count": 1
+  }
+}

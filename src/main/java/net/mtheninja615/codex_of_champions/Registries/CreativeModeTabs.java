@@ -35,6 +35,15 @@ public class CreativeModeTabs {
                         output.accept(ItemRegistries.VAMPIRICCHARMCURIO.get());
                         output.accept(ItemRegistries.ROYALROSECURIO.get());
                         output.accept(ItemRegistries.ROYALANLACECURIO.get());
+                        output.accept(ItemRegistries.DIVINE_STAR.get());
+                        output.accept(ItemRegistries.WITHER_BONE.get());
+                        output.accept(ItemRegistries.GAIA_FRUIT.get());
+                        output.accept(ItemRegistries.ETERNAL_ICE.get());
+                        output.accept(ItemRegistries.BLAZE_CORE.get());
+                        output.accept(ItemRegistries.ELECTRIFIED_BRONZE.get());
+                        output.accept(ItemRegistries.REINFORCED_ENDER_EYE.get());
+                        output.accept(ItemRegistries.SCULK_RIB.get());
+                        output.accept(ItemRegistries.VEXED_PAGE.get());
                     })
             .build());
 

@@ -4,10 +4,10 @@
     "item": "codex_of_champions:arcane_upgrade_template"
   },
   "base": {
-    "item": "irons_spellbooks:divine_pearl"
+    "item": "minecraft:firework_star"
   },
   "addition": {
-    "item": "minecraft:nether_star"
+    "item": "irons_spellbooks:holy_upgrade_orb"
   },
   "result": {
     "id": "codex_of_champions:divine_star"

@@ -69,5 +69,17 @@
 
   "item.codex_of_champions.warden_hunter_leggings" : "Damascus Greaves",
 
-  "item.codex_of_champions.warden_hunter_boots" : "Damascus Boots"
+  "item.codex_of_champions.warden_hunter_boots" : "Damascus Boots",
+
+  "item.codex_of_champions.excalibur" : "Excalibur",
+
+  "item.codex_of_champions.angelic_annhilator" : "Angelic Annhilator",
+
+  "item.codex_of_champions.sculk_slicer" : "Sculk Slicer",
+
+  "item.codex_of_champions.brutis" : "Brutis",
+
+  "item.codex_of_champions.thunderbringer" : "Thunderbringer",
+
+  "item.codex_of_champions.worldbreaker" : "Worldbreaker"
 }

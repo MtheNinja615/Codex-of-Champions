@@ -19,7 +19,6 @@ public class CreativeModeTabs {
                     .title(Component.translatable("creativetab.codex_of_champions.codex_of_champions"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ItemRegistries.FLOWERING_PENDANT.get());
-                        output.accept(ItemRegistries.CRYSTAL_CLAYMORE.get());
                         output.accept(ItemRegistries.TRUEFIREWARDRING.get());
                         output.accept(ItemRegistries.BLOOD_SOUL_MASK.get());
                         output.accept(ItemRegistries.BLOOD_SOUL_ROBES.get());
@@ -28,8 +27,6 @@ public class CreativeModeTabs {
                         output.accept(ItemRegistries.ARCANE_UPGRADE_TEMPLATE.get());
                         output.accept(ItemRegistries.CODEX_SPELLBOOK.get());
                         output.accept(ItemRegistries.SOUL_FORGED_INGOT.get());
-                        output.accept(ItemRegistries.SOULFIRE_GREATSWORD.get());
-                        output.accept(ItemRegistries.DEATHFIRE_GREATSWORD.get());
                         output.accept(ItemRegistries.AzureAnlaceCurio.get());
                         output.accept(ItemRegistries.CHAOSORBCURIO.get());
                         output.accept(ItemRegistries.VAMPIRICCHARMCURIO.get());
@@ -44,6 +41,15 @@ public class CreativeModeTabs {
                         output.accept(ItemRegistries.REINFORCED_ENDER_EYE.get());
                         output.accept(ItemRegistries.SCULK_RIB.get());
                         output.accept(ItemRegistries.VEXED_PAGE.get());
+                        output.accept(ItemRegistries.BRUTIS.get());
+                        output.accept(ItemRegistries.EXCALIBUR.get());
+                        output.accept(ItemRegistries.ANGELIC_ANNHILATOR.get());
+                        output.accept(ItemRegistries.CRYSTAL_CLAYMORE.get());
+                        output.accept(ItemRegistries.SOULFIRE_GREATSWORD.get());
+                        output.accept(ItemRegistries.DEATHFIRE_GREATSWORD.get());
+                        output.accept(ItemRegistries.SCULK_SLICER.get());
+                        output.accept(ItemRegistries.WORLDBREAKER.get());
+                        output.accept(ItemRegistries.THUNDERBRINGER.get());
                     })
             .build());
 

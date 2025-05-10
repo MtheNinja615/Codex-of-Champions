@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    " D ",
+    " Y "
+  ],
+  "key": {
+    "#": {
+      "item": "codex_of_champions:divine_star"
+    },
+    "D": {
+      "item": "codex_of_champions:azure_anlace"
+    },
+    "Y": {
+      "item": "irons_spellbooks:weapon_parts"
+    }
+  },
+  "result": {
+    "id": "codex_of_champions:excalibur",
+    "count": 1
+  }
+}

@@ -103,6 +103,32 @@ public class ItemRegistries {
             new MagicSwordItem(COCExtendedWeaponTiers.SOULFIRE_GREATSWORD, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.SOULFIRE_GREATSWORD)),
                     SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.FLAMING_STRIKE_SPELL, 7))));
 
+    //Angelic Annhilator
+    public static final DeferredHolder<Item, Item> ANGELIC_ANNHILATOR = ITEMS.register("angelic_annhilator", () ->
+            new MagicSwordItem(COCExtendedWeaponTiers.ANGELIC_ANNHILATOR, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.ANGELIC_ANNHILATOR)),
+                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.DIVINE_SMITE_SPELL, 7))));
+
+    //Excalibur
+    public static final DeferredHolder<Item, Item> EXCALIBUR = ITEMS.register("excalibur", () ->
+            new MagicSwordItem(COCExtendedWeaponTiers.EXCALIBUR, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.EXCALIBUR)),
+                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.DIVINE_SMITE_SPELL, 6))));
+    //Thunderbringer
+    public static final DeferredHolder<Item, Item> THUNDERBRINGER = ITEMS.register("thunderbringer", () ->
+            new MagicSwordItem(COCExtendedWeaponTiers.THUNDERBRINGER, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.THUNDERBRINGER)),
+                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.THUNDERSTORM_SPELL, 9))));
+    //Brutis
+    public static final DeferredHolder<Item, Item> BRUTIS = ITEMS.register("brutis", () ->
+            new MagicSwordItem(COCExtendedWeaponTiers.BRUTIS, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.BRUTIS)),
+                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.SACRIFICE_SPELL, 7))));
+    //Worldbreaker
+    public static final DeferredHolder<Item, Item> WORLDBREAKER = ITEMS.register("worldbreaker", () ->
+            new MagicSwordItem(COCExtendedWeaponTiers.WORLD_BREAKER, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.WORLD_BREAKER)),
+                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.EARTHQUAKE_SPELL, 11))));
+    //Worldbreaker
+    public static final DeferredHolder<Item, Item> SCULK_SLICER = ITEMS.register("sculk_slicer", () ->
+            new MagicSwordItem(COCExtendedWeaponTiers.SCULK_SLICER, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.SCULK_SLICER)),
+                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.SONIC_BOOM_SPELL, 4))));
+
     /***
      * Armor
      */

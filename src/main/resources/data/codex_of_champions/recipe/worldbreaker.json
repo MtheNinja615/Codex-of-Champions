@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#D#",
+    " Y "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:poisonous_potato"
+    },
+    "D": {
+      "item": "codex_of_champions:gaia_fruit"
+    },
+    "Y": {
+      "item": "irons_spellbooks:weapon_parts"
+    }
+  },
+  "result": {
+    "id": "codex_of_champions:worldbreaker",
+    "count": 1
+  }
+}

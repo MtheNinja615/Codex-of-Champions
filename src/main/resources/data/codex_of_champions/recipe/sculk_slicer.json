@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " D ",
+    "D#D",
+    " Y "
+  ],
+  "key": {
+    "#": {
+      "item": "codex_of_champions:sculk_rib"
+    },
+    "D": {
+      "item": "irons_spellbooks:eldritch_manuscript"
+    },
+    "Y": {
+      "item": "irons_spellbooks:weapon_parts"
+    }
+  },
+  "result": {
+    "id": "codex_of_champions:sculk_slicer",
+    "count": 1
+  }
+}

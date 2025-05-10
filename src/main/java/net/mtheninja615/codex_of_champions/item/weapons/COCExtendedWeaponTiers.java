@@ -17,7 +17,7 @@ import java.util.function.Supplier;
 
 public class COCExtendedWeaponTiers implements Tier, IronsWeaponTier {
     //  Crystal Claymore
-    public static COCExtendedWeaponTiers CRYSTAL_CLAYMORE = new COCExtendedWeaponTiers(12000, 12, -3.2F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistry.EVOCATION_RUNE.get()),
+    public static COCExtendedWeaponTiers CRYSTAL_CLAYMORE = new COCExtendedWeaponTiers(12000, 12, -3.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.VEXED_PAGE.get()),
             new AttributeContainer(AttributeRegistry.EVOCATION_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
     //  Soulfire Greatsword
     public static COCExtendedWeaponTiers SOULFIRE_GREATSWORD = new COCExtendedWeaponTiers(12000, 10, -3.0F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.SOUL_FORGED_INGOT.get()),
@@ -25,11 +25,40 @@ public class COCExtendedWeaponTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ALObjects.Attributes.OVERHEAL, 0.125, AttributeModifier.Operation.ADD_VALUE)
             );
 
-    //  Soulfire Greatsword
-    public static COCExtendedWeaponTiers DEATHFIRE_GREATSWORD = new COCExtendedWeaponTiers(16000, 10, -3.0F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.SOUL_FORGED_INGOT.get()),
+    //  Deathfire Greatsword
+    public static COCExtendedWeaponTiers DEATHFIRE_GREATSWORD = new COCExtendedWeaponTiers(16000, 11, -3.2F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.SOUL_FORGED_INGOT.get()),
             new AttributeContainer(AttributeRegistry.ELDRITCH_MAGIC_RESIST, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.OVERHEAL, 0.25, AttributeModifier.Operation.ADD_VALUE)
+    );
+//Angelic Annhilator
+    public static COCExtendedWeaponTiers ANGELIC_ANNHILATOR = new COCExtendedWeaponTiers(16000, 8, -2.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.DIVINE_STAR.get()),
+            new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, 0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(ALObjects.Attributes.HEALING_RECEIVED, 0.20, AttributeModifier.Operation.ADD_VALUE)
+    );
+//Exaclibur
+    public static COCExtendedWeaponTiers EXCALIBUR = new COCExtendedWeaponTiers(16000, 7, -2.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.DIVINE_STAR.get()),
+            new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+    //Thunderbringer
+    public static COCExtendedWeaponTiers THUNDERBRINGER = new COCExtendedWeaponTiers(16000, 10, -3.2F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.DIVINE_STAR.get()),
+            new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, 0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(Attributes.MOVEMENT_SPEED, 0.02, AttributeModifier.Operation.ADD_VALUE)
+    );
+    //Brutis
+    public static COCExtendedWeaponTiers BRUTIS = new COCExtendedWeaponTiers(16000, 6, -2.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.WITHER_BONE.get()),
+            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, 0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(Attributes.SNEAKING_SPEED, 20, AttributeModifier.Operation.ADD_VALUE)
+    );
+    //World Breaker
+    public static COCExtendedWeaponTiers WORLD_BREAKER = new COCExtendedWeaponTiers(16000, 12, -3.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.GAIA_FRUIT.get()),
+            new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(ALObjects.Attributes.OVERHEAL, 0.2, AttributeModifier.Operation.ADD_VALUE)
+    );
+    //Sculk Slicer
+    public static COCExtendedWeaponTiers SCULK_SLICER = new COCExtendedWeaponTiers(16000, 6, -2.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.SCULK_RIB.get()),
+            new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, 0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(ALObjects.Attributes.CURRENT_HP_DAMAGE, 0.05, AttributeModifier.Operation.ADD_VALUE)
     );
 
     //private final int level;

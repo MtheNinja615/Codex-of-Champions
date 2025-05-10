@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "## ",
+    "#D ",
+    " Y "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:copper_ingot"
+    },
+    "D": {
+      "item": "codex_of_champions:electrified_bronze"
+    },
+    "Y": {
+      "item": "irons_spellbooks:weapon_parts"
+    }
+  },
+  "result": {
+    "id": "codex_of_champions:thunderbringer",
+    "count": 1
+  }
+}

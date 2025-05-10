@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#D#",
+    " Y "
+  ],
+  "key": {
+    "#": {
+      "item": "irons_spellbooks:blood_vial"
+    },
+    "D": {
+      "item": "codex_of_champions:wither_bone"
+    },
+    "Y": {
+      "item": "irons_spellbooks:weapon_parts"
+    }
+  },
+  "result": {
+    "id": "codex_of_champions:brutis",
+    "count": 1
+  }
+}

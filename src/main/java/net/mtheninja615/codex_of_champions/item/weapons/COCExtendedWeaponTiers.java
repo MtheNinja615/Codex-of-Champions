@@ -9,6 +9,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
@@ -59,6 +60,11 @@ public class COCExtendedWeaponTiers implements Tier, IronsWeaponTier {
     public static COCExtendedWeaponTiers SCULK_SLICER = new COCExtendedWeaponTiers(16000, 6, -2.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistries.SCULK_RIB.get()),
             new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, 0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(ALObjects.Attributes.CURRENT_HP_DAMAGE, 0.05, AttributeModifier.Operation.ADD_VALUE)
+    );
+    //Monosword
+    public static COCExtendedWeaponTiers MONOSWORD = new COCExtendedWeaponTiers(16000, 7, -2.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistry.DIVINE_SOULSHARD.get()),
+            new AttributeContainer(AttributeRegistry.MAX_MANA, 250, AttributeModifier.Operation.ADD_VALUE),
+            new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, 0.25, AttributeModifier.Operation.ADD_VALUE)
     );
 
     //private final int level;

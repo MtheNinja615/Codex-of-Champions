@@ -128,7 +128,10 @@ public class ItemRegistries {
     public static final DeferredHolder<Item, Item> SCULK_SLICER = ITEMS.register("sculk_slicer", () ->
             new MagicSwordItem(COCExtendedWeaponTiers.SCULK_SLICER, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.SCULK_SLICER)),
                     SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.SONIC_BOOM_SPELL, 4))));
-
+    //Monosword
+    public static final DeferredHolder<Item, Item> MONOSWORD = ITEMS.register("monosword", () ->
+            new MagicSwordItem(COCExtendedWeaponTiers.MONOSWORD, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.MONOSWORD)),
+                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.DRAGON_BREATH_SPELL, 4))));
     /***
      * Armor
      */

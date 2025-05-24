@@ -1,4 +1,4 @@
-package net.mtheninja615.codex_of_champions.spells;
+package net.mtheninja615.codex_of_champions.spells.eldritch;
 
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.events.SpellHealEvent;

@@ -1,7 +1,8 @@
 package net.mtheninja615.codex_of_champions.Registries;
 
 import net.mtheninja615.codex_of_champions.CodexOfChampions;
-import net.mtheninja615.codex_of_champions.spells.PersonaBondSpell;
+import net.mtheninja615.codex_of_champions.spells.eldritch.PersonaBondSpell;
+import net.mtheninja615.codex_of_champions.spells.ender.MissileSalvo;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
@@ -23,6 +24,14 @@ public class SpellRegistries {
 
 //Persona Bond
 public static final Supplier<AbstractSpell> PERSONA_BOND = registerSpell(new PersonaBondSpell());
+
+/***
+ * * Ender
+ */
+
+//Missile Salvo
+public static final Supplier<AbstractSpell> MISSILE_SALVO = registerSpell(new MissileSalvo());
+
 
     public static void register(IEventBus eventBus)
     {

@@ -81,5 +81,11 @@
 
   "item.codex_of_champions.thunderbringer" : "Thunderbringer",
 
-  "item.codex_of_champions.worldbreaker" : "Worldbreaker"
+  "item.codex_of_champions.worldbreaker" : "Worldbreaker",
+
+  "item.codex_of_champions.monosword" : "Monosword",
+
+  "spell.codex_of_champions.persona_bond" : "Persona Bond",
+
+  "item.codex_of_champions.aurora_spellbook" : "Book of the Northern Lights"
 }

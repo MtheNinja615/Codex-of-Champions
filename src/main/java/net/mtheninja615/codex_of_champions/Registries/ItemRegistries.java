@@ -131,7 +131,7 @@ public class ItemRegistries {
     //Monosword
     public static final DeferredHolder<Item, Item> MONOSWORD = ITEMS.register("monosword", () ->
             new MagicSwordItem(COCExtendedWeaponTiers.MONOSWORD, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.MONOSWORD)),
-                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.DRAGON_BREATH_SPELL, 4))));
+                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistries.PERSONA_BOND, 1))));
     /***
      * Armor
      */
@@ -157,6 +157,11 @@ public class ItemRegistries {
                     new AttributeContainer(AttributeRegistry.SPELL_POWER, .15F, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     new AttributeContainer(AttributeRegistry.MAX_MANA, 500, AttributeModifier.Operation.ADD_VALUE),
                     new AttributeContainer(AttributeRegistry.CASTING_MOVESPEED, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+            ));
+    public static final DeferredHolder<Item, Item> ARUROA_SPELLBOOK = ITEMS.register("aurora_spellbook", () ->
+            new SpellBook(10).withSpellbookAttributes(
+                    new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, .10F, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                    new AttributeContainer(AttributeRegistry.MAX_MANA, 200, AttributeModifier.Operation.ADD_VALUE)
             ));
 
 

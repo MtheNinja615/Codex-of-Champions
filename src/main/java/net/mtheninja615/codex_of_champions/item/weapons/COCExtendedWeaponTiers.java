@@ -62,7 +62,7 @@ public class COCExtendedWeaponTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(ALObjects.Attributes.CURRENT_HP_DAMAGE, 0.05, AttributeModifier.Operation.ADD_VALUE)
     );
     //Monosword
-    public static COCExtendedWeaponTiers MONOSWORD = new COCExtendedWeaponTiers(16000, 7, -2.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistry.DIVINE_SOULSHARD.get()),
+    public static COCExtendedWeaponTiers MONOSWORD = new COCExtendedWeaponTiers(16000, 9, -2.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistry.DIVINE_SOULSHARD.get()),
             new AttributeContainer(AttributeRegistry.MAX_MANA, 250, AttributeModifier.Operation.ADD_VALUE),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, 0.25, AttributeModifier.Operation.ADD_VALUE)
     );

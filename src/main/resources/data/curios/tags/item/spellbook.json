@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values" :[
-    "codex_of_champions:codex_of_champions_spellbook"
+    "codex_of_champions:codex_of_champions_spellbook",
+    "codex_of_champions:aurora_spellbook"
   ]
 }

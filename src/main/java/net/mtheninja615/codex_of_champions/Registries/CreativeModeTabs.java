@@ -50,6 +50,7 @@ public class CreativeModeTabs {
                         output.accept(ItemRegistries.SCULK_SLICER.get());
                         output.accept(ItemRegistries.WORLDBREAKER.get());
                         output.accept(ItemRegistries.THUNDERBRINGER.get());
+                        output.accept(ItemRegistries.ARUROA_SPELLBOOK.get());
                     })
             .build());
 

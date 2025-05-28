@@ -62,6 +62,7 @@ public class MissileSalvo extends AbstractSpell {
         bolt.setPos(entity.position().add(0.75, entity.getEyeHeight() - bolt.getBoundingBox().getYsize() * .5f, 0));
         bolt.shoot(entity.getLookAngle());
         bolt.setDamage(getDamage(spellLevel, entity));
+        bolt.setExplosionRadius(2);
         world.addFreshEntity(bolt);
         Comet bolt1 = new Comet(world, entity);
         bolt1.setPos(entity.position().add(-0.75, entity.getEyeHeight() - bolt1.getBoundingBox().getYsize() * .5f, 0));
@@ -69,7 +70,7 @@ public class MissileSalvo extends AbstractSpell {
         bolt1.setDamage(getDamage(spellLevel, entity));
         world.addFreshEntity(bolt1);
         Comet bolt2 = new Comet(world, entity);
-        bolt2.setPos(entity.position().add(0, entity.getEyeHeight() - bolt2.getBoundingBox().getYsize() * .5f, 0));
+        bolt2.setPos(entity.position().add(0, entity.getEyeHeight() - bolt2.getBoundingBox().getYsize() * -.5f, 0));
         bolt2.shoot(entity.getLookAngle());
         bolt2.setDamage(getDamage(spellLevel, entity));
         world.addFreshEntity(bolt2);

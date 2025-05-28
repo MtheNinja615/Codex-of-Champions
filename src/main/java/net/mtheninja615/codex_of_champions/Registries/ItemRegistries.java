@@ -8,6 +8,7 @@ import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.item.SpellBook;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
+import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ArmorItem;
@@ -16,6 +17,7 @@ import net.minecraft.world.item.Rarity;
 import net.mtheninja615.codex_of_champions.item.armor.BloodSoulArmorItem;
 import net.mtheninja615.codex_of_champions.item.armor.WardenHunterArmorItem;
 import net.mtheninja615.codex_of_champions.item.curios.*;
+import net.mtheninja615.codex_of_champions.item.staffs.COCStaffTier;
 import net.mtheninja615.codex_of_champions.item.weapons.COCExtendedWeaponTiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -163,6 +165,11 @@ public class ItemRegistries {
                     new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, .10F, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                     new AttributeContainer(AttributeRegistry.MAX_MANA, 200, AttributeModifier.Operation.ADD_VALUE)
             ));
+    /***
+     * Staffs
+     */
+// Nameless Staff (Made for Ender)
+    public static final DeferredHolder<Item, Item> NAMELESS_STAFF = ITEMS.register("nameless_staff", () -> new StaffItem(ItemPropertiesHelper.equipment(1).fireResistant().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCStaffTier.NAMELESS_STAFF))));
 
 
 }

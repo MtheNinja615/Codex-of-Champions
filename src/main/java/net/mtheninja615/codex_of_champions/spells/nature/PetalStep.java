@@ -7,7 +7,6 @@ import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.network.particles.TeleportParticlesPacket;
 import io.redspace.ironsspellbooks.util.Log;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
@@ -76,7 +75,7 @@ public class PetalStep  extends AbstractSpell {
     @Override
     public void onCast(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         if (Log.SPELL_DEBUG) {
-            IronsSpellbooks.LOGGER.debug("TeleportSpell.onCast isClient:{}, entity:{}, pmd:{}", level.isClientSide, entity, playerMagicData);
+            IronsSpellbooks.LOGGER.debug("PetalStep.onCast isClient:{}, entity:{}, pmd:{}", level.isClientSide, entity, playerMagicData);
         }
         var teleportData = (TeleportData) playerMagicData.getAdditionalCastData();
 

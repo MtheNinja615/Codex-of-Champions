@@ -7,6 +7,7 @@ import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
+import io.redspace.ironsspellbooks.network.particles.TeleportParticlesPacket;
 import io.redspace.ironsspellbooks.util.Log;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
@@ -28,7 +29,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
 
 import java.util.List;
 import java.util.Optional;
-
+@AutoSpellConfig
 public class PetalStep  extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(CodexOfChampions.MODID, "petal_step");
 

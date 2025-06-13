@@ -51,6 +51,8 @@ public class CreativeModeTabs {
                         output.accept(ItemRegistries.WORLDBREAKER.get());
                         output.accept(ItemRegistries.THUNDERBRINGER.get());
                         output.accept(ItemRegistries.ARUROA_SPELLBOOK.get());
+                        output.accept(ItemRegistries.TRIBLADE.get());
+                        output.accept(ItemRegistries.NAMELESS_STAFF.get());
                     })
             .build());
 

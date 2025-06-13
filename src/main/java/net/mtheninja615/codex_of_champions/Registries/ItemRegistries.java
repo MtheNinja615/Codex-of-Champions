@@ -5,6 +5,7 @@ import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
+import io.redspace.ironsspellbooks.compat.Curios;
 import io.redspace.ironsspellbooks.item.SpellBook;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
@@ -19,6 +20,7 @@ import net.mtheninja615.codex_of_champions.item.armor.WardenHunterArmorItem;
 import net.mtheninja615.codex_of_champions.item.curios.*;
 import net.mtheninja615.codex_of_champions.item.staffs.COCStaffTier;
 import net.mtheninja615.codex_of_champions.item.weapons.COCExtendedWeaponTiers;
+import net.mtheninja615.codex_of_champions.item.weapons.TriBladeItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -87,7 +89,7 @@ public class ItemRegistries {
     public static final Supplier<CurioBaseItem> AzureAnlaceCurio = ITEMS.register("azure_anlace", AzureAnlaceCurio::new);
     // Royal Rose
     public static final Supplier<CurioBaseItem> ROYALROSECURIO = ITEMS.register("royal_rose", RoyalRoseCurio::new);
-    //
+    //Royal Anlace
     public static final Supplier<CurioBaseItem> ROYALANLACECURIO = ITEMS.register("royal_anlace", RoyalAnlaceCurio::new);
     /***
      * Weapons
@@ -134,6 +136,12 @@ public class ItemRegistries {
     public static final DeferredHolder<Item, Item> MONOSWORD = ITEMS.register("monosword", () ->
             new MagicSwordItem(COCExtendedWeaponTiers.MONOSWORD, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.MONOSWORD)),
                     SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistries.PERSONA_BOND, 1))));
+    //Plasmasword
+    public static final DeferredHolder<Item, Item> PLASMASWORD = ITEMS.register("plasmasword", () ->
+            new MagicSwordItem(COCExtendedWeaponTiers.PLASMASWORD, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.PLASMASWORD)),
+                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistries.PERSONA_BOND, 1))));
+    //Tri-Sword
+    public static final DeferredHolder<Item, Item> TRIBLADE = ITEMS.register("tri_blade", TriBladeItem::new);
     /***
      * Armor
      */

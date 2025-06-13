@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XZX",
+    "YDY",
+    "YXY"
+  ],
+  "key": {
+    "Z": {
+      "item": "irons_spellbooks:permafrost_shard"
+    },
+    "Y": {
+      "item": "irons_spellbooks:magic_cloth"
+    },
+    "D": {
+      "item": "irons_spellbooks:ruined_book"
+    },
+    "X": {
+      "item": "irons_spellbooks:ice_rune"
+    }
+  },
+  "result": {
+    "id": "codex_of_champions:aurora_spellbook",
+    "count": 1
+  }
+}

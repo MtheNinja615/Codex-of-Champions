@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FIN",
+    "YDZ",
+    " X "
+  ],
+  "key": {
+    "Z": {
+      "item": "irons_spellbooks:nature_rune"
+    },
+    "Y": {
+      "item": "irons_spellbooks:fire_rune"
+    },
+    "D": {
+      "item": "codex_of_champions:excalibur"
+    },
+    "X": {
+      "item": "irons_spellbooks:ice_rune"
+    },
+    "F": {
+      "item": "irons_spellbooks:fire_upgrade_orb"
+    },
+    "N": {
+      "item": "irons_spellbooks:nature_upgrade_orb"
+    },
+    "I": {
+      "item": "irons_spellbooks:ice_upgrade_orb"
+    }
+  },
+  "result": {
+    "id": "codex_of_champions:tri_blade",
+    "count": 1
+  }
+}

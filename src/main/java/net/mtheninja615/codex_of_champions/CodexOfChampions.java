@@ -1,10 +1,7 @@
 package net.mtheninja615.codex_of_champions;
 
 import net.minecraft.resources.ResourceLocation;
-import net.mtheninja615.codex_of_champions.Registries.CreativeModeTabs;
-import net.mtheninja615.codex_of_champions.Registries.ItemRegistries;
-import net.mtheninja615.codex_of_champions.Registries.EffectRegistry;
-import net.mtheninja615.codex_of_champions.Registries.SpellRegistries;
+import net.mtheninja615.codex_of_champions.Registries.*;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
@@ -48,6 +45,7 @@ public class CodexOfChampions
         ItemRegistries.register(modEventBus);
         EffectRegistry.register(modEventBus);
         SpellRegistries.register(modEventBus);
+        EntityRegistry.register(modEventBus);
         // Register the net.mtheninja615.codex_of_champions.item to a creative tab
         modEventBus.addListener(this::addCreative);
 

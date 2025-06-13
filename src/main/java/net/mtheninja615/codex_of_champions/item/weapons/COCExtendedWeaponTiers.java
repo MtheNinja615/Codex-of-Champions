@@ -9,7 +9,6 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
@@ -66,6 +65,20 @@ public class COCExtendedWeaponTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.MAX_MANA, 250, AttributeModifier.Operation.ADD_VALUE),
             new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, 0.25, AttributeModifier.Operation.ADD_VALUE)
     );
+    //Plasmasword
+    public static COCExtendedWeaponTiers PLASMASWORD = new COCExtendedWeaponTiers(16000, 9, -2.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistry.DIVINE_SOULSHARD.get()),
+            new AttributeContainer(AttributeRegistry.MAX_MANA, 300, AttributeModifier.Operation.ADD_VALUE),
+            new AttributeContainer(ALObjects.Attributes.ARMOR_SHRED, 0.30, AttributeModifier.Operation.ADD_VALUE)
+    );
+    //Tri-Sword
+    public static COCExtendedWeaponTiers TRISWORD = new COCExtendedWeaponTiers(16000, 9, -2.5F, 10, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ItemRegistry.BLANK_RUNE.get()),
+            new AttributeContainer(AttributeRegistry.MAX_MANA, 50, AttributeModifier.Operation.ADD_VALUE),
+            new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+    );
+    
+
 
     //private final int level;
     private final int uses;

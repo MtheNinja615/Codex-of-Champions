@@ -8,6 +8,7 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.phys.Vec3;
 import net.mtheninja615.codex_of_champions.CodexOfChampions;
+import net.mtheninja615.codex_of_champions.player.COCClientSpellCastHelper;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
 public class PetalStepParticlesPacket  implements CustomPacketPayload {
@@ -33,7 +34,7 @@ public class PetalStepParticlesPacket  implements CustomPacketPayload {
 
     public static void handle(PetalStepParticlesPacket packet, IPayloadContext context) {
         context.enqueueWork(() -> {
-            ClientSpellCastHelper.handleClientboundTeleport(packet.pos1, packet.pos2);
+            COCClientSpellCastHelper.handleClientboundPetalStep(packet.pos1, packet.pos2);
         });
     }
 

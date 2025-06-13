@@ -87,5 +87,19 @@
 
   "spell.codex_of_champions.persona_bond" : "Persona Bond",
 
-  "item.codex_of_champions.aurora_spellbook" : "Book of the Northern Lights"
+  "item.codex_of_champions.aurora_spellbook" : "Book of the Northern Lights",
+
+  "item.codex_of_champions.tri_blade" : "Elemental Tri Blade",
+
+  "item.codex_of_champions.plasmasword" : "Plasmasword",
+
+  "spell.codex_of_champions.petal_step" : "Petal Step",
+
+  "spell.codex_of_champions.missile_salvo": "Missile Salvo",
+
+  "item.codex_of_champions.nameless_staff": "Nameless Staff",
+
+  "spell.codex_of_champions.missile_salvo.guide" : "Hold to send a barrage of Comets exploding on impact with mobs or blocks.",
+
+  "spell.codex_of_champions.petal_step.guide" : "Instantaneously teleport to where you are looking. Gain a short duration of true invisibility and speed when after teleporting"
 }

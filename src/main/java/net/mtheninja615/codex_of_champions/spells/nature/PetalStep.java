@@ -1,5 +1,6 @@
 package net.mtheninja615.codex_of_champions.spells.nature;
 
+import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
@@ -7,7 +8,7 @@ import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.network.particles.TeleportParticlesPacket;
+import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
 import io.redspace.ironsspellbooks.util.Log;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
@@ -17,6 +18,8 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
@@ -34,7 +37,7 @@ public class PetalStep  extends AbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(CodexOfChampions.MODID, "petal_step");
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
-            .setMinRarity(SpellRarity.UNCOMMON)
+            .setMinRarity(SpellRarity.EPIC)
             .setSchoolResource(SchoolRegistry.NATURE_RESOURCE)
             .setMaxLevel(5)
             .setCooldownSeconds(3)
@@ -70,7 +73,7 @@ public class PetalStep  extends AbstractSpell {
 
     @Override
     public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of(SoundEvents.ENDERMAN_TELEPORT);
+        return Optional.of(SoundEvents.CHERRY_LEAVES_FALL);
     }
 
     @Override
@@ -105,6 +108,10 @@ public class PetalStep  extends AbstractSpell {
 //        level.playSound(null, dest.x, dest.y, dest.z, getCastFinishSound().get(), SoundSource.NEUTRAL, 1f, 1f);
         entity.playSound(getCastFinishSound().get(), 2.0f, 1.0f);
 
+        //Getaway Effect
+
+        entity.addEffect(new MobEffectInstance(ALObjects.MobEffects.MOVEMENT_SPEED, 150, 1, false, false, true));
+        entity.addEffect(new MobEffectInstance(MobEffectRegistry.TRUE_INVISIBILITY, 75, 0, false, false, true));
         super.onCast(level, spellLevel, entity, castSource, playerMagicData);
     }
 

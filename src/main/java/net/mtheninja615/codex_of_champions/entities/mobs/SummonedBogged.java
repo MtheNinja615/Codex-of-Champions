@@ -7,12 +7,11 @@ import io.redspace.ironsspellbooks.entity.mobs.goals.*;
 import io.redspace.ironsspellbooks.util.OwnerHelper;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
@@ -21,6 +20,9 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.monster.Bogged;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.mtheninja615.codex_of_champions.Registries.EffectRegistry;
@@ -129,6 +131,13 @@ public class SummonedBogged extends Bogged implements IMagicSummon {
             discard();
         }
     }
+
+   // @Override
+   // protected void populateDefaultEquipmentSlots(RandomSource random, DifficultyInstance difficulty) {
+
+     //   this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.BOW.get()));
+     //   this.setDropChance(EquipmentSlot.MAINHAND, 0.0F);
+ //   }
 
     @Override
     public boolean hurt(DamageSource pSource, float pAmount) {

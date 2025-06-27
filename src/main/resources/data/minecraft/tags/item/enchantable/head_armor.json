@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "codex_of_champions:blood_soul_mask",
-    "codex_of_champions:warden_hunter_boots"
+    "codex_of_champions:blossom_cloak_hood",
+    "codex_of_champions:sakura_blossom_cloak_hood",
+    "codex_of_champions:lightning_herald_helmet",
+    "codex_of_champions:warden_hunter_helmet"
+
   ]
 }

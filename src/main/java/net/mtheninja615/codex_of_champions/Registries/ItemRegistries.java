@@ -164,12 +164,17 @@ public class ItemRegistries {
     public static final DeferredHolder<Item, Item> LIGTNING_HERALD_ARMOR = ITEMS.register("ligtning_herald_chestplate", () -> new LightningHeraldArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
     public static final DeferredHolder<Item, Item> LIGTNING_HERALD_LEGGINGS = ITEMS.register("ligtning_herald_leggings", () -> new LightningHeraldArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
     public static final DeferredHolder<Item, Item> LIGTNING_HERALD_BOOTS = ITEMS.register("ligtning_herald_boots", () -> new LightningHeraldArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+    //Lightning Herald Armor
+    public static final DeferredHolder<Item, Item> FROSTBITE_HELMET = ITEMS.register("frostbite_helmet", () -> new FrostbiteArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.HELMET.getDurability(19))));
+    public static final DeferredHolder<Item, Item> FROSTBITE_ARMOR = ITEMS.register("frostbite_chestplate", () -> new FrostbiteArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+    public static final DeferredHolder<Item, Item> FROSTBITE_LEGGINGS = ITEMS.register("frostbite_leggings", () -> new FrostbiteArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+    public static final DeferredHolder<Item, Item> FROSTBITE_BOOTS = ITEMS.register("frostbite_boots", () -> new FrostbiteArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
     //Sakura Blossom Cloak Armor
     public static final DeferredHolder<Item, Item> SAKURA_BLOSSOM_CLOAK_HELMET = ITEMS.register("sakura_blossom_cloak_hood", () -> new SakuraBlossomCloakArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.HELMET.getDurability(19))));
     public static final DeferredHolder<Item, Item> SAKURA_BLOSSOM_CLOAK_ARMOR = ITEMS.register("sakura_blossom_cloak_robes", () -> new SakuraBlossomCloakArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
     public static final DeferredHolder<Item, Item> SAKURA_BLOSSOM_CLOAK_LEGGINGS = ITEMS.register("sakura_blossom_cloak_leggings", () -> new SakuraBlossomCloakArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
     public static final DeferredHolder<Item, Item> SAKURA_BLOSSOM_CLOAK_BOOTS = ITEMS.register("sakura_blossom_cloak_boots", () -> new SakuraBlossomCloakArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(19))));
-
     /***
      * Spellbooks
      */
@@ -181,6 +186,7 @@ public class ItemRegistries {
                     new AttributeContainer(AttributeRegistry.MAX_MANA, 500, AttributeModifier.Operation.ADD_VALUE),
                     new AttributeContainer(AttributeRegistry.CASTING_MOVESPEED, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
             ));
+    // Aruroa Tome
     public static final DeferredHolder<Item, Item> ARUROA_SPELLBOOK = ITEMS.register("aurora_spellbook", () ->
             new SpellBook(10).withSpellbookAttributes(
                     new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, .10F, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),

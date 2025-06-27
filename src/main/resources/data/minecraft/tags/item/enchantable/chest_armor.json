@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "codex_of_champions:blood_soul_robes",
-    "codex_of_champions:warden_hunter_armor"
+    "codex_of_champions:warden_hunter_armor",
+    "codex_of_champions:blossom_cloak_robes",
+    "codex_of_champions:ligtning_herald_chestplate",
+    "codex_of_champions:sakura_blossom_cloak_robes"
   ]
 }

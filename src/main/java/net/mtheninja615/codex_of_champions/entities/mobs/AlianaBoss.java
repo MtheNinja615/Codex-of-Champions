@@ -66,12 +66,6 @@ import software.bernie.geckolib.animation.AnimationState;
 import java.util.List;
 
 public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
-    // This method is only needed if you plan on summoning the boss with a spell
-    public AlianaBoss(Level level)
-    {
-        this(EntityRegistry.ALIANA.get(), level);
-        setPersistenceRequired();
-    }
 
     // Constructor for the boss
     public AlianaBoss(EntityType<? extends AbstractSpellCastingMob> pEntityType, Level pLevel) {
@@ -200,147 +194,43 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
 
         this.goalSelector.addGoal(1, new FloatGoal(this));
         // Magic Spells
-        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, SpellRegistry.ELDRITCH_BLAST_SPELL.get(), 1, 3, 80, 150, 1));
+        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, SpellRegistry.FLAMING_BARRAGE_SPELL.get(), 1, 3, 80, 150, 1));
         this.goalSelector.addGoal(3, new WizardAttackGoal(this, 1.25f, 50, 80)
                 .setSpells(
                         // Attack
                         List.of(
-                                SpellRegistry.SONIC_BOOM_SPELL.get(),
-                                SpellRegistry.SHOCKWAVE_SPELL.get(),
-                                SpellRegistry.BLOOD_SLASH_SPELL.get(),
-                                SpellRegistry.BLOOD_NEEDLES_SPELL.get(),
+                                SpellRegistry.ROOT_SPELL.get(),
+                                SpellRegistry.POISON_BREATH_SPELL.get(),
+                                SpellRegistry.FIREFLY_SWARM_SPELL.get(),
+                                SpellRegistry.BLIGHT_SPELL.get(),
                                 SpellRegistry.FIRE_ARROW_SPELL.get(),
-                                SpellRegistry.CHAIN_LIGHTNING_SPELL.get()
+                                SpellRegistry.SCORCH_SPELL.get(),
+                                SpellRegistry.STOMP_SPELL.get()
                         ),
                         // Defense
                         List.of(
                                 SpellRegistry.COUNTERSPELL_SPELL.get(),
-                                SpellRegistry.CHARGE_SPELL.get(),
-                                SpellRegistry.ABYSSAL_SHROUD_SPELL.get(),
-                                SpellRegistry.THUNDERSTORM_SPELL.get()
+                                SpellRegistry.SPIDER_ASPECT_SPELL.get(),
+                                SpellRegistry.OAKSKIN_SPELL.get(),
+                                SpellRegistry.TELEKINESIS_SPELL.get()
                         ),
                         // Movement
                         List.of(
-                                SpellRegistry.BLOOD_STEP_SPELL.get()
+                                SpellRegistries.PETAL_STEP.get(),
+                                SpellRegistry.BURNING_DASH_SPELL.get()
                         ),
                         // Support
                         List.of(
-                                SpellRegistry.RAISE_DEAD_SPELL.get(),
-                                SpellRegistry.SUMMON_VEX_SPELL.get(),
                                 SpellRegistry.COUNTERSPELL_SPELL.get(),
-                                SpellRegistry.SACRIFICE_SPELL.get()
+                                SpellRegistry.HEAT_SURGE_SPELL.get()
                         )
-                ).setSingleUseSpell(SpellRegistries.PETAL_STEP.get(), 70, 100, 3, 5)
+                ).setSingleUseSpell(SpellRegistry.COUNTERSPELL_SPELL.get(), 70, 100, 3, 5)
                 .setSpellQuality(1.0f, 1.0f));
         this.goalSelector.addGoal(5, new PatrolNearLocationGoal(this, 32.0F, 0.9));
         this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
     }
 
-    // Second phase spells
-    private void secondPhaseGoals()
-    {
-        this.goalSelector.getAvailableGoals().forEach(WrappedGoal::stop);
-        this.goalSelector.removeAllGoals((x) -> true);
 
-        this.goalSelector.addGoal(1, new FloatGoal(this));
-        // Magic Spells
-        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, SpellRegistry.ELDRITCH_BLAST_SPELL.get(), 1, 3, 50, 80, 3));
-        this.goalSelector.addGoal(3, new WizardAttackGoal(this, 1.25f, 35, 50)
-                .setSpells(
-                        // Attack
-                        List.of(
-                                SpellRegistry.SONIC_BOOM_SPELL.get(),
-                                SpellRegistry.SHOCKWAVE_SPELL.get(),
-                                SpellRegistry.BLOOD_SLASH_SPELL.get(),
-                                SpellRegistry.BLOOD_NEEDLES_SPELL.get(),
-                                SpellRegistry.ACUPUNCTURE_SPELL.get(),
-                                SpellRegistry.FIRE_ARROW_SPELL.get(),
-                                SpellRegistry.MAGIC_ARROW_SPELL.get(),
-                                SpellRegistry.CHAIN_LIGHTNING_SPELL.get(),
-                                SpellRegistry.LIGHTNING_LANCE_SPELL.get(),
-                                SpellRegistry.SUMMON_SWORDS.get()
-                        ),
-                        // Defense
-                        List.of(
-                                SpellRegistry.COUNTERSPELL_SPELL.get(),
-                                SpellRegistry.HEAL_SPELL.get(),
-                                SpellRegistry.CHARGE_SPELL.get(),
-                                SpellRegistry.ABYSSAL_SHROUD_SPELL.get(),
-                                SpellRegistry.BLIGHT_SPELL.get(),
-                                SpellRegistry.THUNDERSTORM_SPELL.get()
-                        ),
-                        // Movement
-                        List.of(
-                                SpellRegistry.BLOOD_STEP_SPELL.get()
-                        ),
-                        // Support
-                        List.of(
-                                SpellRegistry.ABYSSAL_SHROUD_SPELL.get(),
-                                SpellRegistry.RAISE_DEAD_SPELL.get(),
-                                SpellRegistry.SUMMON_VEX_SPELL.get(),
-                                SpellRegistry.COUNTERSPELL_SPELL.get(),
-                                SpellRegistry.SACRIFICE_SPELL.get()
-
-                        )
-                ).setSingleUseSpell(SpellRegistry.SACRIFICE_SPELL.get(), 70, 100, 3, 5)
-                .setSpellQuality(1.2f, 1.2f));
-        this.goalSelector.addGoal(5, new PatrolNearLocationGoal(this, 32.0F, 0.9));
-        this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
-    }
-
-    // Final phase spells
-    private void finalPhaseGoals()
-    {
-        this.goalSelector.getAvailableGoals().forEach(WrappedGoal::stop);
-        this.goalSelector.removeAllGoals((x) -> true);
-
-        this.goalSelector.addGoal(1, new FloatGoal(this));
-        // Magic Spells
-        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, SpellRegistry.ELDRITCH_BLAST_SPELL.get(), 3, 5, 30, 50, 5));
-        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, SpellRegistry.ABYSSAL_SHROUD_SPELL.get(), 1, 3, 100, 250, 0));
-        this.goalSelector.addGoal(3, new WizardAttackGoal(this, 1.25f, 20, 35)
-                .setSpells(
-                        // Attack
-                        List.of(
-                                SpellRegistry.SONIC_BOOM_SPELL.get(),
-                                SpellRegistry.SHOCKWAVE_SPELL.get(),
-                                SpellRegistry.BLOOD_SLASH_SPELL.get(),
-                                SpellRegistry.ACUPUNCTURE_SPELL.get(),
-                                SpellRegistry.LIGHTNING_LANCE_SPELL.get(),
-                                SpellRegistry.SCULK_TENTACLES_SPELL.get(),
-                                SpellRegistry.COUNTERSPELL_SPELL.get(),
-                                SpellRegistry.FIRE_ARROW_SPELL.get(),
-                                SpellRegistry.MAGIC_ARROW_SPELL.get(),
-                                SpellRegistry.SUMMON_SWORDS.get(),
-                                SpellRegistry.SACRIFICE_SPELL.get()
-                        ),
-                        // Defense
-                        List.of(
-                                SpellRegistry.COUNTERSPELL_SPELL.get(),
-                                SpellRegistry.HEAL_SPELL.get(),
-                                SpellRegistry.CHARGE_SPELL.get(),
-                                SpellRegistry.BLIGHT_SPELL.get(),
-                                SpellRegistry.SLOW_SPELL.get(),
-                                SpellRegistry.ABYSSAL_SHROUD_SPELL.get(),
-                                SpellRegistry.BLOOD_STEP_SPELL.get(),
-                                SpellRegistry.THUNDERSTORM_SPELL.get()
-                        ),
-                        // Movement
-                        List.of(
-                                SpellRegistry.BLOOD_STEP_SPELL.get(),
-                                SpellRegistry.PLANAR_SIGHT_SPELL.get()),
-                        // Support
-                        List.of(
-                                SpellRegistry.ABYSSAL_SHROUD_SPELL.get(),
-                                SpellRegistry.SUMMON_VEX_SPELL.get(),
-                                SpellRegistry.SACRIFICE_SPELL.get()
-                        )
-                        // Silence down here is a temp thing
-                ).setSingleUseSpell(SpellRegistries.PETAL_STEP.get(), 450, 650, 1, 1)
-                .setSpellQuality(1.3f, 1.3f));
-        this.goalSelector.addGoal(5, new PatrolNearLocationGoal(this, 32.0F, 0.9));
-        this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
-    }
 
     // Down here in the tick event we do more keeping track of the boss
     // For setting the boss bar and the boss phases
@@ -375,7 +265,7 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
                     setHealth(halfHealth);
                 }
 
-                secondPhaseGoals();
+
 
                 this.getAttributes().getInstance(AttributeRegistry.SPELL_POWER).setBaseValue(1.1F);
                 this.getAttributes().getInstance(AttributeRegistry.SPELL_RESIST).setBaseValue(1.2F);
@@ -428,7 +318,7 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
                 setPhase(Phase.DesperationPhase);
                 setHealth(halfHealth);
 
-                finalPhaseGoals();
+
 
                 this.getAttributes().getInstance(AttributeRegistry.SPELL_POWER).setBaseValue(1.5F);
                 this.getAttributes().getInstance(AttributeRegistry.SPELL_RESIST).setBaseValue(1.3F);
@@ -606,27 +496,7 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
         }
     }
 
-    @Override
-    public void addAdditionalSaveData(CompoundTag pCompound) {
-        super.addAdditionalSaveData(pCompound);
-        if (this.hasCustomName())
-        {
-            this.bossEvent.setName(this.getDisplayName());
-        }
-        setPhase(pCompound.getInt("phase"));
-        if (isPhase(Phase.SecondPhase))
-        {
-            secondPhaseGoals();
-        }
-        if (isPhase(Phase.FinalPhase))
-        {
-            finalPhaseGoals();
-        }
-        if (deathLoot != null)
-        {
-            pCompound.put("deathLootItems", deathLoot.createTag(this.registryAccess()));
-        }
-    }
+
 
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder pBuilder) {
@@ -647,13 +517,9 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
     /***
      * Geckolib anims
      */
-    private final RawAnimation transitionPhaseAnimation = RawAnimation.begin().thenPlay("ascended_desperation");
     private final RawAnimation deathAnimation = RawAnimation.begin().thenPlay("ascended_death");
-    private final RawAnimation jumpAnimation = RawAnimation.begin().thenPlay("ascended_jump");
 
-    private final AnimationController<AlianaBoss> transitionController = new AnimationController<>(this, "ascended_one_transition", 0, this::transitionPredicate);
     private final AnimationController<AlianaBoss> deathController = new AnimationController<>(this, "ascended_one_death", 0, this::deathPredicate);
-    private final AnimationController<AlianaBoss> jumpController = new AnimationController<>(this, "ascended_one_jump", 0, this::jumpPredicate);
 
     RawAnimation animationToPlay = null;
 
@@ -661,23 +527,14 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
-        controllerRegistrar.add(transitionController);
+
         controllerRegistrar.add(deathController);
-        controllerRegistrar.add(jumpController);
+
         super.registerControllers(controllerRegistrar);
     }
 
-    private PlayState transitionPredicate(AnimationState<AlianaBoss> animationState)
-    {
-        var controller = animationState.getController();
-        if (isTransitionPhase())
-        {
-            controller.setAnimation(transitionPhaseAnimation);
-            return PlayState.CONTINUE;
-        }
 
-        return PlayState.STOP;
-    }
+
 
     private PlayState deathPredicate(AnimationState<AlianaBoss> animationState)
     {
@@ -691,19 +548,7 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
         return PlayState.STOP;
     }
 
-    private PlayState jumpPredicate(AnimationState<AlianaBoss> animationState)
-    {
-        var controller = animationState.getController();
-        if (isJumpingBack() == true)
-        {
-            controller.forceAnimationReset();
-            controller.setAnimation(jumpAnimation);
 
-            this.isJumping = false;
-        }
-
-        return transitionController.getAnimationState() == AnimationController.State.STOPPED ? PlayState.CONTINUE : PlayState.STOP;
-    }
 
     public boolean isTransitionPhase()
     {

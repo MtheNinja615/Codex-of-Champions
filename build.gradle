@@ -147,10 +147,12 @@ configurations {
 dependencies {
     // ISS ***************************************************************************************************
     //implementation "io.redspace:irons_spellbooks:1.21-3.9.1"
-    implementation "curse.maven:irons-spells-n-spellbooks-855414:6333294"
+    implementation "io.redspace:irons_spellbooks:${irons_spells_version}"
 
+    //Ace Spells Utils
+    implementation "curse.maven:aces-spell-utils-1299492:6726513"
     // GECKOLIB ***************************************************************************************************
-    implementation "curse.maven:geckolib-388172:6027599"
+    implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
 
     // CAELUS *****************************************************************************************************
     compileOnly "com.illusivesoulworks.caelus:caelus-neoforge:${caelus_version}:api"

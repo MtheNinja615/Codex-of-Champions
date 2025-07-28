@@ -12,7 +12,7 @@ import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 public class BloodSoulArmorItem extends ImbuableModArmorItem {
     public BloodSoulArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
-        super(ModArmorMaterials.BLOOD_SOUL_MATERIAL, type, settings,
+        super(ModArmorMaterials.SCHOOL_TWO, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 200.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.CASTING_MOVESPEED, .05, AttributeModifier.Operation.ADD_VALUE),

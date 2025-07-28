@@ -12,7 +12,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 public class LightningHeraldArmorItem extends ImbuableModArmorItem {
     public LightningHeraldArmorItem(Type type, Properties settings) {
         // Add in your armor tier + additional attributes for your item
-        super(ModArmorMaterials.LIGHTNING_HERALD_MATERIAL, type, settings,
+        super(ModArmorMaterials.SCHOOL_TWO, type, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 200.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, .15, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.CASTING_MOVESPEED, .05, AttributeModifier.Operation.ADD_VALUE),

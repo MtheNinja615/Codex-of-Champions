@@ -1,10 +1,9 @@
-package net.mtheninja615.codex_of_champions.entities.mobs;
+package net.mtheninja615.codex_of_champions.entities.mobs.bosses;
 
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.entity.mobs.IAnimatedAttacker;
-import io.redspace.ironsspellbooks.entity.mobs.IMagicSummon;
 import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.AbstractSpellCastingMob;
 import io.redspace.ironsspellbooks.entity.mobs.goals.PatrolNearLocationGoal;
 import io.redspace.ironsspellbooks.entity.mobs.goals.SpellBarrageGoal;
@@ -17,10 +16,7 @@ import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.acetheeldritchking.aces_spell_utils.entity.mobs.GenericBossEntity;
 import net.acetheeldritchking.aces_spell_utils.utils.boss_music.BossMusicManager;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextColor;
-import net.minecraft.network.protocol.game.ClientboundSetTitleTextPacket;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -54,14 +50,10 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.Vec3;
-import net.mtheninja615.codex_of_champions.Registries.EntityRegistry;
-import net.mtheninja615.codex_of_champions.Registries.ItemRegistries;
 import net.mtheninja615.codex_of_champions.Registries.SpellRegistries;
-import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.network.PacketDistributor;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animation.*;
-import software.bernie.geckolib.animation.AnimationState;
 
 import java.util.List;
 
@@ -194,25 +186,25 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
 
         this.goalSelector.addGoal(1, new FloatGoal(this));
         // Magic Spells
-        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, SpellRegistry.FLAMING_BARRAGE_SPELL.get(), 1, 3, 80, 150, 1));
+        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, SpellRegistry.POISON_ARROW_SPELL.get(), 1, 3, 80, 150, 1));
         this.goalSelector.addGoal(3, new WizardAttackGoal(this, 1.25f, 50, 80)
                 .setSpells(
                         // Attack
                         List.of(
-                                SpellRegistry.ROOT_SPELL.get(),
-                                SpellRegistry.POISON_BREATH_SPELL.get(),
-                                SpellRegistry.FIREFLY_SWARM_SPELL.get(),
+                                SpellRegistry.TELEKINESIS_SPELL.get(),
                                 SpellRegistry.BLIGHT_SPELL.get(),
+                                SpellRegistry.ROOT_SPELL.get(),
                                 SpellRegistry.FIRE_ARROW_SPELL.get(),
                                 SpellRegistry.SCORCH_SPELL.get(),
-                                SpellRegistry.STOMP_SPELL.get()
+                                SpellRegistry.STOMP_SPELL.get(),
+                                SpellRegistry.POISON_BREATH_SPELL.get(),
+                                SpellRegistry.FIREFLY_SWARM_SPELL.get()
                         ),
                         // Defense
                         List.of(
                                 SpellRegistry.COUNTERSPELL_SPELL.get(),
                                 SpellRegistry.SPIDER_ASPECT_SPELL.get(),
-                                SpellRegistry.OAKSKIN_SPELL.get(),
-                                SpellRegistry.TELEKINESIS_SPELL.get()
+                                SpellRegistry.OAKSKIN_SPELL.get()
                         ),
                         // Movement
                         List.of(
@@ -224,8 +216,9 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
                                 SpellRegistry.COUNTERSPELL_SPELL.get(),
                                 SpellRegistry.HEAT_SURGE_SPELL.get()
                         )
-                ).setSingleUseSpell(SpellRegistry.COUNTERSPELL_SPELL.get(), 70, 100, 3, 5)
+                ).setSingleUseSpell(SpellRegistry.ROOT_SPELL.get(), 70, 100, 3, 5)
                 .setSpellQuality(1.0f, 1.0f));
+
         this.goalSelector.addGoal(5, new PatrolNearLocationGoal(this, 32.0F, 0.9));
         this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8.0F));
     }
@@ -397,7 +390,6 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
         if (this.isDeadOrDying() && !this.level().isClientSide)
         {
             this.castComplete();
-            this.serverTriggerAnimation("ascended_death");
             this.serverTriggerEvent(STOP_MUSIC);
         }
     }
@@ -480,6 +472,8 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
                 .add(AttributeRegistry.SPELL_POWER, 1.35)
                 .add(AttributeRegistry.SPELL_RESIST, 1.35)
                 .add(AttributeRegistry.MAX_MANA, 1000)
+                .add(AttributeRegistry.NATURE_SPELL_POWER, 1.5)
+                .add(AttributeRegistry.FIRE_SPELL_POWER, 1.5)
                 ;
     }
 
@@ -517,36 +511,15 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
     /***
      * Geckolib anims
      */
-    private final RawAnimation deathAnimation = RawAnimation.begin().thenPlay("ascended_death");
 
-    private final AnimationController<AlianaBoss> deathController = new AnimationController<>(this, "ascended_one_death", 0, this::deathPredicate);
+
 
     RawAnimation animationToPlay = null;
 
     public boolean isJumping;
 
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
-
-        controllerRegistrar.add(deathController);
-
-        super.registerControllers(controllerRegistrar);
-    }
 
 
-
-
-    private PlayState deathPredicate(AnimationState<AlianaBoss> animationState)
-    {
-        var controller = animationState.getController();
-        if (this.isDeadOrDying())
-        {
-            controller.setAnimation(deathAnimation);
-            return PlayState.CONTINUE;
-        }
-
-        return PlayState.STOP;
-    }
 
 
 

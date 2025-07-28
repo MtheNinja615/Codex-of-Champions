@@ -1,4 +1,4 @@
-package net.mtheninja615.codex_of_champions.entities.mobs;
+package net.mtheninja615.codex_of_champions.entities.mobs.bosses;
 
 import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.AbstractSpellCastingMob;
 import io.redspace.ironsspellbooks.entity.mobs.abstract_spell_casting_mob.AbstractSpellCastingMobModel;
@@ -11,8 +11,4 @@ public class AlianaModel extends AbstractSpellCastingMobModel {
         return ResourceLocation.fromNamespaceAndPath(CodexOfChampions.MODID, "textures/entity/bosses/aliana.png");
     }
 
-    @Override
-    public ResourceLocation getAnimationResource(AbstractSpellCastingMob object) {
-        return ResourceLocation.fromNamespaceAndPath(CodexOfChampions.MODID, "animations/casting_animations.json");
-    }
 }

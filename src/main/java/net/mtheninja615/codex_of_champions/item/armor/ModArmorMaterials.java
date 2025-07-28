@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class ModArmorMaterials {
-    public static final Holder<ArmorMaterial> BLOOD_SOUL_MATERIAL = register("blood_soul",
+    public static final Holder<ArmorMaterial> SCHOOL_TWO = register("school_two",
             Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
                 attribute.put(ArmorItem.Type.BOOTS, 6);
                 attribute.put(ArmorItem.Type.LEGGINGS, 8);
@@ -29,47 +29,6 @@ public class ModArmorMaterials {
                 attribute.put(ArmorItem.Type.BODY, 12);
             }), 16, 2f, 0.1f, () -> ItemRegistry.MITHRIL_INGOT.get());
 
-    public static final Holder<ArmorMaterial> WARDEN_HUNTER_MATERIAL = register("warden_hunter",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 6);
-                attribute.put(ArmorItem.Type.LEGGINGS, 8);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 10);
-                attribute.put(ArmorItem.Type.HELMET, 6);
-                attribute.put(ArmorItem.Type.BODY, 12);
-            }), 16, 2f, 0.1f, () -> ItemRegistry.MITHRIL_INGOT.get());
-
-    public static final Holder<ArmorMaterial> BLOSSOM_CLOAK_MATERIAL = register("blossom_cloak",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 6);
-                attribute.put(ArmorItem.Type.LEGGINGS, 8);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 10);
-                attribute.put(ArmorItem.Type.HELMET, 6);
-                attribute.put(ArmorItem.Type.BODY, 12);
-            }), 16, 2f, 0.1f, () -> ItemRegistry.MITHRIL_INGOT.get());
-    public static final Holder<ArmorMaterial> LIGHTNING_HERALD_MATERIAL = register("lightning_herald",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 6);
-                attribute.put(ArmorItem.Type.LEGGINGS, 8);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 10);
-                attribute.put(ArmorItem.Type.HELMET, 6);
-                attribute.put(ArmorItem.Type.BODY, 12);
-            }), 16, 2f, 0.1f, () -> ItemRegistry.MITHRIL_INGOT.get());
-    public static final Holder<ArmorMaterial> FROSTBITE_MATERIAL = register("frostbite",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 6);
-                attribute.put(ArmorItem.Type.LEGGINGS, 8);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 10);
-                attribute.put(ArmorItem.Type.HELMET, 6);
-                attribute.put(ArmorItem.Type.BODY, 12);
-            }), 16, 2f, 0.1f, () -> ItemRegistry.MITHRIL_INGOT.get());
-    public static final Holder<ArmorMaterial> SAKURA_BLOSSOM_CLOAK_MATERIAL = register("sakura_blossom_cloak",
-            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 6);
-                attribute.put(ArmorItem.Type.LEGGINGS, 8);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 10);
-                attribute.put(ArmorItem.Type.HELMET, 6);
-                attribute.put(ArmorItem.Type.BODY, 12);
-            }), 16, 2f, 0.1f, () -> ItemRegistry.MITHRIL_INGOT.get());
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
                                                   int enchantability, float toughness, float knockbackResistance,
                                                   Supplier<Item> ingredientItem) {

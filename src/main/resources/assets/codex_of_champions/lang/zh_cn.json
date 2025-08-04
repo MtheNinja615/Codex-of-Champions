@@ -1,0 +1,75 @@
+{
+  "item.codex_of_champions.flowering_pendant": "繁花吊坠",
+
+  "creativetab.codex_of_champions.codex_of_champions": "英豪法典",
+
+  "item.codex_of_champions.true_fireward_ring": "炎御指环",
+
+  "item.codex_of_champions.crystal_claymore": "磐晶双刃剑",
+
+  "item.codex_of_champions.blood_soul_mask": "赤魂十字军面甲",
+  "item.codex_of_champions.blood_soul_boots": "赤魂十字军战靴",
+  "item.codex_of_champions.blood_soul_robes": "赤魂十字军战袍",
+  "item.codex_of_champions.blood_soul_leggings": "赤魂十字军护腿",
+
+  "item.codex_of_champions.arcane_upgrade_template": "奥术升级模板",
+
+  "item.codex_of_champions.codex_of_champions_spellbook": "英豪法典",
+
+  "item.codex_of_champions.soul_forged_ingot": "魂铸锭",
+
+  "item.codex_of_champions.soulfire_greatsword": "魂炎巨剑",
+  "item.codex_of_champions.deathfire_greatsword": "殇焰重剑",
+
+  "item.codex_of_champions.vampiric_charm" : "血蝠护身符",
+
+  "curios.identifier.arcane_trinket" : "奥术饰品",
+  "curios.modifiers.arcane_trinket" : "装备在奥术饰品栏位时：",
+
+  "item.codex_of_champions.chaos_orb" : "混元宝珠",
+
+  "item.codex_of_champions.azure_anlace" : "蔚蓝短剑",
+  "item.codex_of_champions.royal_rose" : "末王玫瑰",
+  "item.codex_of_champions.royal_anlace" : "永恒誓约之遗剑",
+  "item.codex_of_champions.royal_anlace.desc" : "相依共存，缺一不可",
+  "item.codex_of_champions.royal_rose.desc" : "或许它能缔结永恒誓约",
+  "item.codex_of_champions.azure_anlace.desc" : "它也许能缔结永恒誓约",
+
+  "item.codex_of_champions.blaze_core" : "炽焰核心",
+  "item.codex_of_champions.divine_star" : "圣耀星辰",
+  "item.codex_of_champions.electrified_bronze" : "鸣雷青铜",
+  "item.codex_of_champions.eternal_ice" : "永凝冰",
+  "item.codex_of_champions.gaia_fruit" : "盖亚圣实",
+  "item.codex_of_champions.reinforced_ender_eye" : "升华末影之眼",
+  "item.codex_of_champions.sculk_rib" : "幽邃肋骨",
+  "item.codex_of_champions.vexed_page" : "恼鬼书页",
+  "item.codex_of_champions.wither_bone" : "凋零枯骨",
+
+  "item.codex_of_champions.warden_hunter_helmet" : "古狩幽溟头盔",
+  "item.codex_of_champions.warden_hunter_armor" : "古狩幽溟战甲", 
+  "item.codex_of_champions.warden_hunter_leggings" : "古狩幽溟护腿",
+  "item.codex_of_champions.warden_hunter_boots" : "古狩幽溟战靴",
+
+  "item.codex_of_champions.excalibur" : "誓约与胜利之剑",
+  "item.codex_of_champions.angelic_annhilator" : "寂灭圣天使", 
+  "item.codex_of_champions.sculk_slicer" : "幽匿斩切者",
+  "item.codex_of_champions.brutis" : "血瘀祭剑",
+  "item.codex_of_champions.thunderbringer" : "鸣雷使徒",
+  "item.codex_of_champions.worldbreaker" : "世界碎灭者",
+  "item.codex_of_champions.monosword" : "单分子剑",
+
+  "spell.codex_of_champions.persona_bond" : "人灵共鸣",
+
+  "item.codex_of_champions.aurora_spellbook" : "北境极光之书",
+
+  "item.codex_of_champions.tri_blade" : "三相元素刃",
+  "item.codex_of_champions.plasmasword" : "等离子剑",
+
+  "spell.codex_of_champions.petal_step" : "落樱步",
+  "spell.codex_of_champions.missile_salvo": "暗星齐射",
+
+  "item.codex_of_champions.nameless_staff": "失落者法杖",
+
+  "spell.codex_of_champions.missile_salvo.guide" : "发射一连串彗星，击中生物或方块时爆炸。",
+  "spell.codex_of_champions.petal_step.guide" : "瞬间传送至视线所指之处。传送后获得短暂的速度提升与完全隐身效果。"
+}

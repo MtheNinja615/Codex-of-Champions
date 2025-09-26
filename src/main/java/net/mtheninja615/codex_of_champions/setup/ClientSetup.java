@@ -4,6 +4,7 @@ import net.mtheninja615.codex_of_champions.CodexOfChampions;
 import net.mtheninja615.codex_of_champions.Registries.EntityRegistry;
 import net.mtheninja615.codex_of_champions.entities.render.AlianaRenderer;
 import net.mtheninja615.codex_of_champions.entities.render.PaladinRenderer;
+import net.mtheninja615.codex_of_champions.entities.spells.petal_blizzard.PetalBlizzardRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -14,8 +15,8 @@ public class ClientSetup {
     @SubscribeEvent
     public static void registerRenderer(EntityRenderersEvent.RegisterRenderers event)
     {
-
-        event.registerEntityRenderer(EntityRegistry.ALIANA.get(), AlianaRenderer::new);
+        event.registerEntityRenderer(EntityRegistry.PETAL_BLIZZARD.get(), PetalBlizzardRenderer::new);
+      //  event.registerEntityRenderer(EntityRegistry.ALIANA.get(), AlianaRenderer::new);
         event.registerEntityRenderer(EntityRegistry.PALADIN.get(), PaladinRenderer::new);
         };
     }

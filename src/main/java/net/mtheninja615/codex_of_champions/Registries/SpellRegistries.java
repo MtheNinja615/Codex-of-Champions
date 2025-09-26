@@ -4,6 +4,7 @@ import net.mtheninja615.codex_of_champions.CodexOfChampions;
 import net.mtheninja615.codex_of_champions.spells.eldritch.PersonaBondSpell;
 import net.mtheninja615.codex_of_champions.spells.ender.MissileSalvo;
 import net.mtheninja615.codex_of_champions.spells.fire.FireCluster;
+import net.mtheninja615.codex_of_champions.spells.nature.PetalBlizzardSpell;
 import net.mtheninja615.codex_of_champions.spells.nature.PetalStep;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -40,6 +41,8 @@ public static final Supplier<AbstractSpell> PERSONA_BOND = registerSpell(new Per
 
     //Petal Step
     public static final Supplier<AbstractSpell> PETAL_STEP = registerSpell(new PetalStep());
+    //Petal Blizzard
+    public static final Supplier<AbstractSpell> PETAL_BLIZZARD = registerSpell(new PetalBlizzardSpell());
     //Summon Bogged
    // public static final Supplier<AbstractSpell> SUMMON_BOGGED = registerSpell(new SummonBogged());
     /***

@@ -57,6 +57,8 @@ import software.bernie.geckolib.animation.*;
 
 import java.util.List;
 
+/***
+
 public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
 
     // Constructor for the boss
@@ -508,9 +510,9 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
         return !isTransitionPhase();
     }
 
-    /***
+
      * Geckolib anims
-     */
+
 
 
 
@@ -543,3 +545,5 @@ public class AlianaBoss extends GenericBossEntity implements IAnimatedAttacker {
         return !isTransitionPhase() || this.isDeadOrDying();
     }
 }
+
+***/

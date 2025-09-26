@@ -1,0 +1,47 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 512,
+				"texture_height": 512,
+				"visible_bounds_width": 13,
+				"visible_bounds_height": 9.5,
+				"visible_bounds_offset": [0, 4.25, 0]
+			},
+			"bones": [
+				{
+					"name": "tornado",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "shpinny_thankg",
+					"parent": "tornado",
+					"pivot": [0, 16, -1],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{"origin": [-16, 0, -17], "size": [32, 128, 32], "uv": [384, 175]}
+					]
+				},
+				{
+					"name": "shdose",
+					"parent": "tornado",
+					"pivot": [0, 16, 0],
+					"cubes": [
+						{"origin": [-32, 32, -32], "size": [64, 96, 64], "uv": [126, 176]}
+					]
+				},
+				{
+					"name": "stehiafh",
+					"parent": "tornado",
+					"pivot": [1, 96, -3],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{"origin": [-63, 80, -67], "size": [128, 48, 128], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

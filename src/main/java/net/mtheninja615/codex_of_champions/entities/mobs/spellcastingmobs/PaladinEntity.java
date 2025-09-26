@@ -140,7 +140,7 @@ public class PaladinEntity extends NeutralWizard implements Enemy, IAnimatedAtta
                 .add(Attributes.ATTACK_KNOCKBACK, 0.0)
                 .add(Attributes.MAX_HEALTH, 50.0)
                 .add(AttributeRegistry.HOLY_SPELL_POWER, 1.7)
-                .add(AttributeRegistry.SPELL_RESIST, 2)
+                .add(AttributeRegistry.SPELL_RESIST, 10)
                 .add(Attributes.FOLLOW_RANGE, 24.0)
                 .add(Attributes.ENTITY_INTERACTION_RANGE, 3)
                 .add(Attributes.MOVEMENT_SPEED, .25);

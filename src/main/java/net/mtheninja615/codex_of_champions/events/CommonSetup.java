@@ -12,7 +12,7 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 public class CommonSetup {
     @SubscribeEvent
     public static void onAttributeCreateEvent(EntityAttributeCreationEvent event) {
-        event.put(EntityRegistry.ALIANA.get(), AlianaBoss.createAttributes().build());
+       // event.put(EntityRegistry.ALIANA.get(), AlianaBoss.createAttributes().build());
         event.put(EntityRegistry.PALADIN.get(), PaladinEntity.createAttributes().build());
     }
 }

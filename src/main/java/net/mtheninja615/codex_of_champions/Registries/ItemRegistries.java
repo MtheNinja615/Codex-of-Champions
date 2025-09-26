@@ -90,6 +90,8 @@ public class ItemRegistries {
     public static final Supplier<CurioBaseItem> ROYALROSECURIO = ITEMS.register("royal_rose", RoyalRoseCurio::new);
     //Royal Anlace
     public static final Supplier<CurioBaseItem> ROYALANLACECURIO = ITEMS.register("royal_anlace", RoyalAnlaceCurio::new);
+    // Frostbourne Sheath
+    public static final Supplier<CurioBaseItem> VITALICSHEATHCURIO = ITEMS.register("vitalic_sheath", VitalicSheathCurio::new);
     /***
      * Weapons
      */
@@ -179,6 +181,11 @@ public class ItemRegistries {
     public static final DeferredHolder<Item, Item> MONSTROSITY_ARMOR = ITEMS.register("monstrosity_chestplate", () -> new MonstrosityArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.CHESTPLATE.getDurability(400))));
     public static final DeferredHolder<Item, Item> MONSTROSITY_LEGGINGS = ITEMS.register("monstrosity_leggings", () -> new MonstrosityArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.LEGGINGS.getDurability(400))));
     public static final DeferredHolder<Item, Item> MONSTROSITY_BOOTS = ITEMS.register("monstrosity_boots", () -> new MonstrosityArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(400))));
+    //Monstrosity Armor
+    public static final DeferredHolder<Item, Item> GALA_HELMET = ITEMS.register("gala_hood", () -> new GalaArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.HELMET.getDurability(400))));
+    public static final DeferredHolder<Item, Item> GALA_ARMOR = ITEMS.register("gala_robes", () -> new GalaArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.CHESTPLATE.getDurability(400))));
+    public static final DeferredHolder<Item, Item> GALA_LEGGINGS = ITEMS.register("gala_leggings", () -> new GalaArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.LEGGINGS.getDurability(400))));
+    public static final DeferredHolder<Item, Item> GALA_BOOTS = ITEMS.register("gala_boots", () -> new GalaArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment(1).fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(400))));
 
 
     //Sakura Blossom Cloak Armor

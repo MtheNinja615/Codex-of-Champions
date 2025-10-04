@@ -1,7 +1,9 @@
 {
   "item.codex_of_champions.flowering_pendant": "Flowering Pendant",
 
-  "creativetab.codex_of_champions.codex_of_champions": "Codex of Champions",
+  "creativetab.codex_of_champions.crafting": "Codex of Champions Materials",
+
+  "creativetab.codex_of_champions.gear": "Codex of Champions Gear",
 
   "item.codex_of_champions.true_fireward_ring": "Pyronic Warding Ring",
 
@@ -101,5 +103,17 @@
 
   "spell.codex_of_champions.missile_salvo.guide" : "Hold to send a barrage of Comets exploding on impact with mobs or blocks.",
 
-  "spell.codex_of_champions.petal_step.guide" : "Instantaneously teleport to where you are looking. Gain a short duration of true invisibility and speed when after teleporting"
+  "spell.codex_of_champions.petal_step.guide" : "Instantaneously teleport to where you are looking. Gain a short duration of true invisibility and speed when after teleporting",
+
+  "spell.codex_of_champions.petal_blizzard.guide" : "After a short charge up launch a massive cherry petal tornado wherever you are looking going through multiple mobs.",
+
+  "spell.codex_of_champions.petal_blizzard" : "Blossom Storm",
+
+  "item.codex_of_champions.blossom_cloak_hood" : "Blossom Cloak Hood",
+
+  "item.codex_of_champions.blossom_cloak_robes" : "Blossom Cloak Robes",
+
+  "item.codex_of_champions.blossom_cloak_leggings" : "Blossom Cloak Leggings",
+
+  "item.codex_of_champions.blossom_cloak_boots" :"Blossom Cloak Boots"
 }

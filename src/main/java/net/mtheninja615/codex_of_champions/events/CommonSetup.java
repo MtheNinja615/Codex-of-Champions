@@ -2,7 +2,6 @@ package net.mtheninja615.codex_of_champions.events;
 
 import net.mtheninja615.codex_of_champions.CodexOfChampions;
 import net.mtheninja615.codex_of_champions.Registries.EntityRegistry;
-import net.mtheninja615.codex_of_champions.entities.mobs.bosses.AlianaBoss;
 import net.mtheninja615.codex_of_champions.entities.mobs.spellcastingmobs.PaladinEntity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

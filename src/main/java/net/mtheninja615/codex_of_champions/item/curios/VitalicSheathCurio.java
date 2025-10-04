@@ -22,7 +22,7 @@ import top.theillusivec4.curios.api.SlotContext;
 
 @EventBusSubscriber
 public class VitalicSheathCurio extends SheathCurioItem {
-    public static final int COOLDOWN = 5 * 20;
+    public static final int COOLDOWN = 5 * 100;
 
     public VitalicSheathCurio() {
         super(new Properties().stacksTo(1).rarity(ASRarities.VERDANT_RARITY_PROXY.getValue()).fireResistant(), null);
@@ -61,8 +61,8 @@ public class VitalicSheathCurio extends SheathCurioItem {
     @Override
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {
         Multimap<Holder<Attribute>, AttributeModifier> attr = LinkedHashMultimap.create();
-        attr.put(AttributeRegistry.NATURE_SPELL_POWER, new AttributeModifier(id, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
-        attr.put(AttributeRegistry.CAST_TIME_REDUCTION, new AttributeModifier(id, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+        attr.put(AttributeRegistry.NATURE_SPELL_POWER, new AttributeModifier(id, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+        attr.put(AttributeRegistry.CAST_TIME_REDUCTION, new AttributeModifier(id, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
         attr.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(id, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
         return attr;

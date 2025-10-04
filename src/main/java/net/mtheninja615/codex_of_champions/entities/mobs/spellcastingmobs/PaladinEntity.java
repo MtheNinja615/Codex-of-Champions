@@ -109,7 +109,7 @@ public class PaladinEntity extends NeutralWizard implements Enemy, IAnimatedAtta
         //this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F));
         //this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, 10, true, false, this::isHostileTowards));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
         this.targetSelector.addGoal(5, new ResetUniversalAngerTargetGoal<>(this, false));
     }
 
@@ -138,7 +138,7 @@ public class PaladinEntity extends NeutralWizard implements Enemy, IAnimatedAtta
         return LivingEntity.createLivingAttributes()
                 .add(Attributes.ATTACK_DAMAGE, 3.0)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.0)
-                .add(Attributes.MAX_HEALTH, 50.0)
+                .add(Attributes.MAX_HEALTH, 120.0)
                 .add(AttributeRegistry.HOLY_SPELL_POWER, 1.7)
                 .add(AttributeRegistry.SPELL_RESIST, 10)
                 .add(Attributes.FOLLOW_RANGE, 24.0)
@@ -188,11 +188,6 @@ public class PaladinEntity extends NeutralWizard implements Enemy, IAnimatedAtta
     @Override
     public boolean guardsBlocks() {
         return false;
-    }
-
-    @Override
-    public boolean isHostileTowards(LivingEntity pTarget) {
-        return super.isHostileTowards(pTarget) || pTarget.getAttributeValue(AttributeRegistry.BLOOD_SPELL_POWER) < 1.15;
     }
 
     @Override

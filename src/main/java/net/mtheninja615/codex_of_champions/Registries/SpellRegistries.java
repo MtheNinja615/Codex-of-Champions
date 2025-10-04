@@ -48,8 +48,8 @@ public static final Supplier<AbstractSpell> PERSONA_BOND = registerSpell(new Per
     /***
      * * Fire
      */
-    //Petal Step
-    public static final Supplier<AbstractSpell> FIRE_CLUSTER = registerSpell(new FireCluster());
+    //Fire Cluster
+   // public static final Supplier<AbstractSpell> FIRE_CLUSTER = registerSpell(new FireCluster());
 
     public static void register(IEventBus eventBus)
     {

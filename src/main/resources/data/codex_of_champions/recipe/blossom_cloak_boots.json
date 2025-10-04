@@ -1,0 +1,16 @@
+
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "codex_of_champions:arcane_upgrade_template"
+  },
+  "base": {
+    "item": "irons_spellbooks:plagued_boots"
+  },
+  "addition": {
+    "item": "codex_of_champions:gaia_fruit"
+  },
+  "result": {
+    "id": "codex_of_champions:blossom_cloak_boots"
+  }
+}

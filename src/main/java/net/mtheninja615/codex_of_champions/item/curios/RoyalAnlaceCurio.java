@@ -6,6 +6,7 @@ import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.curios.SimpleDescriptiveCurio;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import net.acetheeldritchking.aces_spell_utils.utils.ASRarities;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -16,7 +17,7 @@ import top.theillusivec4.curios.api.SlotContext;
 
 public class RoyalAnlaceCurio extends SimpleDescriptiveCurio {
     public RoyalAnlaceCurio() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).fireResistant() );
+        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(ASRarities.COSMIC_RARITY_PROXY.getValue()).fireResistant() );
     }
     //uhhhhhhhhhhhhhhh idk what this does I just looked at the DTE Github
     @Override

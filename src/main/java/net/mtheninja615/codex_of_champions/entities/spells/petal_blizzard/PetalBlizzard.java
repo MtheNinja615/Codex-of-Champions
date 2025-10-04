@@ -98,7 +98,7 @@ public class PetalBlizzard extends AbstractMagicProjectile implements GeoEntity 
 
     @Override
     public Optional<Holder<SoundEvent>> getImpactSound() {
-        return Optional.of(SoundRegistry.GUST_CAST);
+        return Optional.of(SoundRegistry.FORCE_IMPACT);
     }
 
     @Override
@@ -114,7 +114,7 @@ public class PetalBlizzard extends AbstractMagicProjectile implements GeoEntity 
                 SpellRegistries.PETAL_BLIZZARD.get().getDamageSource(this, getOwner()));
 
         level().playSound(null, getX(), getY(), getZ(),
-                SoundRegistry.SUNBEAM_IMPACT.get(), SoundSource.NEUTRAL, 2.0f, 1.0f);
+                SoundRegistry.FORCE_IMPACT.get(), SoundSource.NEUTRAL, 2.0f, 1.0f);
 
 
     }

@@ -90,9 +90,9 @@ public class ItemRegistries {
     public static final Supplier<CurioBaseItem> ROYALROSECURIO = ITEMS.register("royal_rose", RoyalRoseCurio::new);
     //Royal Anlace
     public static final Supplier<CurioBaseItem> ROYALANLACECURIO = ITEMS.register("royal_anlace", RoyalAnlaceCurio::new);
-    // Frostbourne Sheath
+    // Vitalic Sheath
     public static final Supplier<CurioBaseItem> VITALICSHEATHCURIO = ITEMS.register("vitalic_sheath", VitalicSheathCurio::new);
-    /***
+     /***
      * Weapons
      */
     //Crystal Claymore

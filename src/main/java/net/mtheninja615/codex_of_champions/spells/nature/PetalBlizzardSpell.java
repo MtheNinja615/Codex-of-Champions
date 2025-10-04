@@ -12,6 +12,7 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.mtheninja615.codex_of_champions.CodexOfChampions;
@@ -47,7 +48,7 @@ public class PetalBlizzardSpell extends AbstractSpell {
 
     @Override
     public Optional<SoundEvent> getCastFinishSound() {
-        return Optional.of(SoundRegistry.NATURE_CAST.get());
+        return Optional.of(SoundRegistry.GUST_CAST.get());
     }
 
     @Override
@@ -98,8 +99,10 @@ public class PetalBlizzardSpell extends AbstractSpell {
         float damage = 8 + 30 * (float)(naturePower + generalPower);
         return damage;
     }
-
+   
     public int getRadius(int spellLevel, LivingEntity caster) {
         return 2 + (int) getSpellPower(spellLevel, caster);
+
+
     }
 }

@@ -46,6 +46,8 @@ public class CodexOfChampions
         EffectRegistry.register(modEventBus);
         SpellRegistries.register(modEventBus);
         EntityRegistry.register(modEventBus);
+        CodexAttributeRegistry.register(modEventBus);
+        CodexSchoolRegistry.register(modEventBus);
         // Register the net.mtheninja615.codex_of_champions.item to a creative tab
         modEventBus.addListener(this::addCreative);
 

@@ -155,7 +155,7 @@ dependencies {
     implementation "io.redspace:irons_spellbooks:${irons_spells_version}"
 
     //Ace Spells Utils (Ace iz da goat)
-    implementation "curse.maven:aces-spell-utils-1299492:6999813"
+    implementation "curse.maven:aces-spell-utils-1299492:7093024"
 
     // GECKOLIB ***************************************************************************************************
     implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"

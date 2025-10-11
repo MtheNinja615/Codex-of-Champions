@@ -24,8 +24,6 @@ public class EffectRegistry {
                     .addAttributeModifier(Attributes.ATTACK_DAMAGE,
                             ResourceLocation.fromNamespaceAndPath(CodexOfChampions.MODID, "persona_bond"), 0.15f,
                             AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
-   // public static final DeferredHolder<MobEffect, MobEffect> SUMMONED_BOGGED = MOB_EFFECT_DEFERRED_REGISTER.register("summoned_bogged",
-     //       () -> new SummonBoggedEffect(MobEffectCategory.BENEFICIAL, 1238137));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

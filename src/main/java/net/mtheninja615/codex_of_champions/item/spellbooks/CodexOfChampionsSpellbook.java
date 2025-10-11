@@ -1,0 +1,62 @@
+package net.mtheninja615.codex_of_champions.item.spellbooks;
+
+import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
+import io.redspace.ironsspellbooks.entity.spells.comet.Comet;
+import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
+import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import net.acetheeldritchking.aces_spell_utils.items.curios.PassiveAbilitySpellbook;
+import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
+import net.acetheeldritchking.aces_spell_utils.utils.ASRarities;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.phys.Vec3;
+import net.mtheninja615.codex_of_champions.Registries.ItemRegistries;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+
+public class CodexOfChampionsSpellbook extends PassiveAbilitySpellbook {
+    public static final int COOLDOWN = 5 * 20;
+
+    public CodexOfChampionsSpellbook()
+    {
+        super(12, ItemPropertiesHelper.equipment().fireResistant().stacksTo(1).rarity(ASRarities.ARID_RARITY_PROXY.getValue()));
+        withSpellbookAttributes(
+                new AttributeContainer(AttributeRegistry.MAX_MANA, 300, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.25F, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(ASAttributeRegistry.GOLIATH_SLAYER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+        );
+    }
+
+    @Override
+    protected int getCooldownTicks() {
+        return COOLDOWN;
+    }
+
+    @SubscribeEvent
+    public static void handleAbility(LivingIncomingDamageEvent event)
+    {
+        var spellbook = ((CodexOfChampionsSpellbook) ItemRegistries.CODEX_OF_CHAMPIONS.get());
+        Entity attacker = event.getSource().getEntity();
+
+        if (attacker instanceof ServerPlayer player)
+        {
+            if (spellbook.isEquippedBy(player))
+            {
+                if (spellbook.tryProcCooldown(player))
+                {
+                    var victim = event.getEntity();
+
+                    Comet comet = new Comet(player.level(), player);
+                    comet.setDamage(5);
+                    comet.setPos(victim.getX(), victim.getY() + 7, victim.getZ());
+                    var trajectory = new Vec3(0.05F, -0.85F, 0).normalize();
+                    comet.shoot(trajectory, 0.045F);
+                    comet.setExplosionRadius(4.5F);
+
+                    player.level().addFreshEntity(comet);
+                }
+            }
+        }
+    }
+}

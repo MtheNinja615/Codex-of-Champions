@@ -17,6 +17,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.mtheninja615.codex_of_champions.item.armor.*;
 import net.mtheninja615.codex_of_champions.item.curios.*;
+import net.mtheninja615.codex_of_champions.item.spellbooks.CodexOfChampionsSpellbook;
 import net.mtheninja615.codex_of_champions.item.staffs.COCStaffTier;
 import net.mtheninja615.codex_of_champions.item.weapons.COCExtendedWeaponTiers;
 import net.mtheninja615.codex_of_champions.item.weapons.TriBladeItem;
@@ -198,12 +199,7 @@ public class ItemRegistries {
      */
 
 // Codex Of Champions
-    public static final DeferredHolder<Item, Item> CODEX_SPELLBOOK = ITEMS.register("codex_of_champions_spellbook", () ->
-            new SpellBook(12).withSpellbookAttributes(
-                    new AttributeContainer(AttributeRegistry.SPELL_POWER, .15F, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                    new AttributeContainer(AttributeRegistry.MAX_MANA, 4000, AttributeModifier.Operation.ADD_VALUE),
-                    new AttributeContainer(AttributeRegistry.CASTING_MOVESPEED, .05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
-            ));
+    public static final DeferredHolder<Item, Item> CODEX_OF_CHAMPIONS = ITEMS.register("codex_of_champions_spellbook", CodexOfChampionsSpellbook::new);
     // Aruroa Tome
     public static final DeferredHolder<Item, Item> ARUROA_SPELLBOOK = ITEMS.register("aurora_spellbook", () ->
             new SpellBook(10).withSpellbookAttributes(

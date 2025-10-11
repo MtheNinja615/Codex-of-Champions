@@ -39,7 +39,7 @@ public class CreativeModeTabs {
                     })
             .build());
     public static final Supplier<CreativeModeTab> CODEX_OF_CHAMPIONS_GEAR = CREATIVE_MODE_TAB.register("codex_of_champions_gear",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ItemRegistries.CODEX_SPELLBOOK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ItemRegistries.CODEX_OF_CHAMPIONS.get()))
                     .title(Component.translatable("creativetab.codex_of_champions.gear"))
                     .displayItems((itemDisplayParameters, output) -> {
                     //Weapons
@@ -67,7 +67,7 @@ public class CreativeModeTabs {
 
                         //Spellbooks
                         output.accept(ItemRegistries.ARUROA_SPELLBOOK.get());
-                        output.accept(ItemRegistries.CODEX_SPELLBOOK.get());
+                        output.accept(ItemRegistries.CODEX_OF_CHAMPIONS.get());
 
                     //Armor
                         output.accept(ItemRegistries.BLOOD_SOUL_MASK.get());

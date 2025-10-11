@@ -5,7 +5,6 @@ import io.redspace.ironsspellbooks.entity.spells.comet.Comet;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.acetheeldritchking.aces_spell_utils.items.curios.PassiveAbilitySpellbook;
-import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.acetheeldritchking.aces_spell_utils.utils.ASRarities;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
@@ -13,18 +12,19 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.phys.Vec3;
 import net.mtheninja615.codex_of_champions.Registries.ItemRegistries;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 
+@EventBusSubscriber
 public class CodexOfChampionsSpellbook extends PassiveAbilitySpellbook {
     public static final int COOLDOWN = 5 * 20;
 
     public CodexOfChampionsSpellbook()
     {
-        super(12, ItemPropertiesHelper.equipment().fireResistant().stacksTo(1).rarity(ASRarities.ARID_RARITY_PROXY.getValue()));
+        super(12, ItemPropertiesHelper.equipment().fireResistant().stacksTo(1).rarity(ASRarities.AQUATIC_RARITY_PROXY.getValue()));
         withSpellbookAttributes(
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 300, AttributeModifier.Operation.ADD_VALUE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.25F, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(ASAttributeRegistry.GOLIATH_SLAYER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.25F, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)
         );
     }
 
@@ -36,14 +36,14 @@ public class CodexOfChampionsSpellbook extends PassiveAbilitySpellbook {
     @SubscribeEvent
     public static void handleAbility(LivingIncomingDamageEvent event)
     {
-        var spellbook = ((CodexOfChampionsSpellbook) ItemRegistries.CODEX_OF_CHAMPIONS.get());
+        var sheath = ((CodexOfChampionsSpellbook) ItemRegistries.CODEX_OF_CHAMPIONS.get());
         Entity attacker = event.getSource().getEntity();
 
         if (attacker instanceof ServerPlayer player)
         {
-            if (spellbook.isEquippedBy(player))
+            if (sheath.isEquippedBy(player))
             {
-                if (spellbook.tryProcCooldown(player))
+                if (sheath.tryProcCooldown(player))
                 {
                     var victim = event.getEntity();
 

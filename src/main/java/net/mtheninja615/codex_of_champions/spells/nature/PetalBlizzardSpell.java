@@ -5,14 +5,15 @@ import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
+import io.redspace.ironsspellbooks.api.util.AnimationHolder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
+import net.acetheeldritchking.aces_spell_utils.spells.ASSpellAnimations;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.mtheninja615.codex_of_champions.CodexOfChampions;
@@ -49,6 +50,11 @@ public class PetalBlizzardSpell extends AbstractSpell {
     @Override
     public Optional<SoundEvent> getCastFinishSound() {
         return Optional.of(SoundRegistry.GUST_CAST.get());
+    }
+
+    @Override
+    public AnimationHolder getCastStartAnimation() {
+        return ASSpellAnimations.ANIMATION_SNOWGRAVE_START;
     }
 
     @Override

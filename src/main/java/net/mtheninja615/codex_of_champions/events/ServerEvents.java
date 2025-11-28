@@ -16,17 +16,13 @@ public class ServerEvents {
     //Credits to Ace for da code
             if (mainhandItem.getItem() instanceof DeathfireGreatswordItem && (!(livingEntity instanceof Player player) || !player.getCooldowns().isOnCooldown(ItemRegistries.DEATHFIRE_GREATSWORD.get())))
     {
-        // Zealous - Entities with over 50% of their health are inflicted with Malignant Burn, summoning smaller blades to slice them on hit
-        final float MAX_HEALTH = target.getMaxHealth();
-        float baseHealth = target.getHealth();
-        double percent = (baseHealth/MAX_HEALTH) * 100;
+
 
         //DiscerningTheEldritch.LOGGER.debug("Max HP: " + MAX_HEALTH);
         //DiscerningTheEldritch.LOGGER.debug("Base HP: " + baseHealth);
         //DiscerningTheEldritch.LOGGER.debug("Percent: " + percent);
 
-        if (percent > 50)
-        {
+
             MagicManager.spawnParticles(target.level(), new BlastwaveParticleOptions(SchoolRegistry.FIRE.get().getTargetingColor(), 1.5f), target.getX(), target.getY() + 0.165F, target.getZ(), 1, 0, 0, 0, 0, true);
 
             for (int i = 0; i < 5; i++)
@@ -49,4 +45,4 @@ public class ServerEvents {
             }
         }
     }
-}
+

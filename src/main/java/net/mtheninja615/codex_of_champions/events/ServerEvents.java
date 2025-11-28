@@ -2,47 +2,59 @@ package net.mtheninja615.codex_of_champions.events;
 
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
+import io.redspace.ironsspellbooks.entity.spells.fire_arrow.FireArrowProjectile;
 import io.redspace.ironsspellbooks.entity.spells.firebolt.FireboltProjectile;
 import io.redspace.ironsspellbooks.particle.BlastwaveParticleOptions;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
 import net.mtheninja615.codex_of_champions.Registries.ItemRegistries;
 import net.mtheninja615.codex_of_champions.item.weapons.DeathfireGreatswordItem;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 
 @EventBusSubscriber
 public class ServerEvents {
-    // Deathfire Greatsword
-    //Credits to Ace for da code
-            if (mainhandItem.getItem() instanceof DeathfireGreatswordItem && (!(livingEntity instanceof Player player) || !player.getCooldowns().isOnCooldown(ItemRegistries.DEATHFIRE_GREATSWORD.get())))
-    {
 
 
-        //DiscerningTheEldritch.LOGGER.debug("Max HP: " + MAX_HEALTH);
-        //DiscerningTheEldritch.LOGGER.debug("Base HP: " + baseHealth);
-        //DiscerningTheEldritch.LOGGER.debug("Percent: " + percent);
+
+    @SubscribeEvent
+    public static void livingDamageEvent(LivingDamageEvent.Post event) {
+        var sourceEntity = event.getSource().getEntity();
+        var target = event.getEntity();
+        LivingEntity livingEntity = (LivingEntity) sourceEntity;
+
+        ItemStack mainhandItem = livingEntity.getMainHandItem();
+
+
+
+        // Deathfire Greatsword
+        //Credits to Ace for code
+        if (mainhandItem.getItem() instanceof DeathfireGreatswordItem && (!(livingEntity instanceof Player player) || !player.getCooldowns().isOnCooldown(ItemRegistries.DEATHFIRE_GREATSWORD.get()))) {
 
 
             MagicManager.spawnParticles(target.level(), new BlastwaveParticleOptions(SchoolRegistry.FIRE.get().getTargetingColor(), 1.5f), target.getX(), target.getY() + 0.165F, target.getZ(), 1, 0, 0, 0, 0, true);
 
-            for (int i = 0; i < 5; i++)
-            {
-                FireboltProjectile bolt = new FireboltProjectile(livingEntity.level(), livingEntity);
 
-                Vec3 origin = target.getEyePosition().add(target.getForward().normalize().scale(1.2F)).subtract(0, 0.15,0);
-                bolt.setPos(origin.subtract(0, bolt.getBbHeight() + 1, 0));
+            for (int i = 0; i < 1; i++) {
+                FireArrowProjectile bolt = new FireArrowProjectile(livingEntity.level(), livingEntity);
+
+                Vec3 origin = target.getEyePosition().add(target.getForward().normalize().scale(1.2F)).subtract(0, -2, 0);
+                bolt.setPos(origin.subtract(0, bolt.getBbHeight() + 2, 0));
                 Vec3 vec3 = target.getForward().add(0, 0.05, 0).normalize();
-                bolt.shoot(vec3.scale(0.5F), 0.4F);
+                bolt.shoot(vec3.scale(0.5F));
                 bolt.setDamage(5);
-                bolt.setHomingTarget(target);
+
 
                 livingEntity.level().addFreshEntity(bolt);
             }
 
-            if (livingEntity instanceof Player player)
-            {
+            if (livingEntity instanceof Player player) {
                 player.getCooldowns().addCooldown(ItemRegistries.DEATHFIRE_GREATSWORD.get(), DeathfireGreatswordItem.COOLDOWN);
             }
         }
     }
+}
 

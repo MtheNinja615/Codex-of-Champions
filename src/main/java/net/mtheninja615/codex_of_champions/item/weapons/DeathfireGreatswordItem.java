@@ -20,7 +20,7 @@ import net.minecraft.world.item.TooltipFlag;
 import java.util.List;
 
 public class DeathfireGreatswordItem extends MagicSwordItem implements UniqueItem {
-    public static final int COOLDOWN = 15 * 20;
+    public static final int COOLDOWN = 1 * 1;
 
     public DeathfireGreatswordItem() {
         super(

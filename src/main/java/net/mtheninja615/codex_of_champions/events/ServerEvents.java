@@ -12,7 +12,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 
 @EventBusSubscriber
 public class ServerEvents {
-    // Awakened Cataclysm
+    // Deathfire Greatsword
+    //Credits to Ace for da code
             if (mainhandItem.getItem() instanceof DeathfireGreatswordItem && (!(livingEntity instanceof Player player) || !player.getCooldowns().isOnCooldown(ItemRegistries.DEATHFIRE_GREATSWORD.get())))
     {
         // Zealous - Entities with over 50% of their health are inflicted with Malignant Burn, summoning smaller blades to slice them on hit

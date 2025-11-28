@@ -66,7 +66,7 @@ public class CreativeModeTabs {
                       //  output.accept(ItemRegistries.VITALICSHEATHCURIO.get());
 
                         //Spellbooks
-                        output.accept(ItemRegistries.ARUROA_SPELLBOOK.get());
+                        output.accept(ItemRegistries.NORTHERN_LIGHTS_SPELLBOOK.get());
                         output.accept(ItemRegistries.CODEX_OF_CHAMPIONS.get());
 
                     //Armor

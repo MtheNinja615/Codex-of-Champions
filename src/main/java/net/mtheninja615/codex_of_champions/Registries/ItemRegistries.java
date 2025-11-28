@@ -2,24 +2,21 @@ package net.mtheninja615.codex_of_champions.Registries;
 
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
-import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
-import io.redspace.ironsspellbooks.compat.Curios;
-import io.redspace.ironsspellbooks.item.SpellBook;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
-import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.item.weapons.StaffItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.mtheninja615.codex_of_champions.item.armor.*;
 import net.mtheninja615.codex_of_champions.item.curios.*;
 import net.mtheninja615.codex_of_champions.item.spellbooks.CodexOfChampionsSpellbook;
+import net.mtheninja615.codex_of_champions.item.spellbooks.NorthernLightsSpellbook;
 import net.mtheninja615.codex_of_champions.item.staffs.COCStaffTier;
 import net.mtheninja615.codex_of_champions.item.weapons.COCExtendedWeaponTiers;
+import net.mtheninja615.codex_of_champions.item.weapons.DeathfireGreatswordItem;
 import net.mtheninja615.codex_of_champions.item.weapons.TriBladeItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -100,10 +97,8 @@ public class ItemRegistries {
     public static final DeferredHolder<Item, Item> CRYSTAL_CLAYMORE = ITEMS.register("crystal_claymore", () ->
             new MagicSwordItem(COCExtendedWeaponTiers.CRYSTAL_CLAYMORE, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.CRYSTAL_CLAYMORE)),
                     SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.CHAIN_CREEPER_SPELL, 8))));
-    //Deathfire Greatsword
-    public static final DeferredHolder<Item, Item> DEATHFIRE_GREATSWORD = ITEMS.register("deathfire_greatsword", () ->
-            new MagicSwordItem(COCExtendedWeaponTiers.DEATHFIRE_GREATSWORD, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.DEATHFIRE_GREATSWORD)),
-                    SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.FLAMING_STRIKE_SPELL, 10))));
+    // Deathfire Greatsword
+    public static final DeferredHolder<Item, Item> DEATHFIRE_GREATSWORD = ITEMS.register("deathfire_greatsword", DeathfireGreatswordItem::new);
     //Soulfire Greatsword
     public static final DeferredHolder<Item, Item> SOULFIRE_GREATSWORD = ITEMS.register("soulfire_greatsword", () ->
             new MagicSwordItem(COCExtendedWeaponTiers.SOULFIRE_GREATSWORD, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.SOULFIRE_GREATSWORD)),
@@ -200,12 +195,8 @@ public class ItemRegistries {
 
 // Codex Of Champions
     public static final DeferredHolder<Item, Item> CODEX_OF_CHAMPIONS = ITEMS.register("codex_of_champions_spellbook", CodexOfChampionsSpellbook::new);
-    // Aruroa Tome
-    public static final DeferredHolder<Item, Item> ARUROA_SPELLBOOK = ITEMS.register("aurora_spellbook", () ->
-            new SpellBook(10).withSpellbookAttributes(
-                    new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, .10F, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                    new AttributeContainer(AttributeRegistry.MAX_MANA, 200, AttributeModifier.Operation.ADD_VALUE)
-            ));
+    //Northern Lights Spellbook
+    public static final DeferredHolder<Item, Item> NORTHERN_LIGHTS_SPELLBOOK = ITEMS.register("aurora_spellbook", NorthernLightsSpellbook::new);
     /***
      * Staffs
      */

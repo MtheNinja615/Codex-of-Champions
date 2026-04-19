@@ -4,6 +4,7 @@ import net.mtheninja615.codex_of_champions.CodexOfChampions;
 import net.mtheninja615.codex_of_champions.spells.eldritch.PersonaBondSpell;
 import net.mtheninja615.codex_of_champions.spells.ender.MissileSalvo;
 import net.mtheninja615.codex_of_champions.spells.fire.FireCluster;
+import net.mtheninja615.codex_of_champions.spells.metal.IronPulce;
 import net.mtheninja615.codex_of_champions.spells.nature.PetalBlizzardSpell;
 import net.mtheninja615.codex_of_champions.spells.nature.PetalStep;
 import net.neoforged.bus.api.IEventBus;
@@ -28,6 +29,11 @@ public class SpellRegistries {
 //Persona Bond
 public static final Supplier<AbstractSpell> PERSONA_BOND = registerSpell(new PersonaBondSpell());
 
+/***
+ * * Metal                    FEAR MAGNETO!!!!!!!!!!!
+ */
+//Iron Pulce
+public static final Supplier<AbstractSpell> IRON_PULCE = registerSpell(new IronPulce());
 /***
  * * Ender
  */

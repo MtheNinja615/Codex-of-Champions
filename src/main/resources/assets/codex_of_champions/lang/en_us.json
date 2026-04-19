@@ -115,5 +115,9 @@
 
   "item.codex_of_champions.blossom_cloak_leggings" : "Blossom Cloak Leggings",
 
-  "item.codex_of_champions.blossom_cloak_boots" :"Blossom Cloak Boots"
+  "item.codex_of_champions.blossom_cloak_boots" :"Blossom Cloak Boots",
+
+  "item.codex_of_champions.more_details" : "Press SHIFT for more details",
+
+  "item.codex_of_champions.deathfire_greatsword.desc" : "Flaming Judgement: Smite the target with a flaming arrow that homes"
 }

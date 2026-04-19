@@ -5,29 +5,26 @@ import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.effect.ImmolateEffect;
 import io.redspace.ironsspellbooks.item.UniqueItem;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import io.redspace.ironsspellbooks.util.MinecraftInstanceHelper;
 import net.acetheeldritchking.aces_spell_utils.utils.ASRarities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 
 import java.util.List;
 
-public class DeathfireGreatswordItem extends MagicSwordItem implements UniqueItem {
+public class EnderKhopeshItem extends MagicSwordItem implements UniqueItem {
     public static final int COOLDOWN = 12 * 15;
 
-    public DeathfireGreatswordItem() {
+    public EnderKhopeshItem() {
         super(
-                COCExtendedWeaponTiers.DEATHFIRE_GREATSWORD,
-                ItemPropertiesHelper.equipment(1).fireResistant().rarity(ASRarities.ACCURSED_RARITY_PROXY.getValue()).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.DEATHFIRE_GREATSWORD)),
+                COCExtendedWeaponTiers.ENDER_KHOPESH,
+                ItemPropertiesHelper.equipment(1).fireResistant().rarity(ASRarities.COSMIC_RARITY_PROXY.getValue()).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.ENDER_KHOPESH)),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(SpellRegistry.FLAMING_STRIKE_SPELL, 9)
+                        new SpellDataRegistryHolder(SpellRegistry.STARFALL_SPELL, 11)
                 )
         );
     }
@@ -40,8 +37,8 @@ public class DeathfireGreatswordItem extends MagicSwordItem implements UniqueIte
             tooltipComponents.add(
                     Component.translatable(
                             "tooltip.irons_spellbooks.passive_ability",
-                            Component.literal(Utils.timeFromTicks(COOLDOWN, 1)).withStyle(ChatFormatting.RED)
-                    ).withStyle(ChatFormatting.DARK_RED)
+                            Component.literal(Utils.timeFromTicks(COOLDOWN, 1)).withStyle(ChatFormatting.LIGHT_PURPLE)
+                    ).withStyle(ChatFormatting.DARK_PURPLE)
             );
             tooltipComponents.add(Component.literal(" ").append(Component.translatable(this.getDescriptionId() + ".desc")).withStyle(ChatFormatting.YELLOW));
         } else

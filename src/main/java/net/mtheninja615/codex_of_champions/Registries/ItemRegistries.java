@@ -15,9 +15,7 @@ import net.mtheninja615.codex_of_champions.item.curios.*;
 import net.mtheninja615.codex_of_champions.item.spellbooks.CodexOfChampionsSpellbook;
 import net.mtheninja615.codex_of_champions.item.spellbooks.NorthernLightsSpellbook;
 import net.mtheninja615.codex_of_champions.item.staffs.COCStaffTier;
-import net.mtheninja615.codex_of_champions.item.weapons.COCExtendedWeaponTiers;
-import net.mtheninja615.codex_of_champions.item.weapons.DeathfireGreatswordItem;
-import net.mtheninja615.codex_of_champions.item.weapons.TriBladeItem;
+import net.mtheninja615.codex_of_champions.item.weapons.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -125,7 +123,12 @@ public class ItemRegistries {
     public static final DeferredHolder<Item, Item> WORLDBREAKER = ITEMS.register("worldbreaker", () ->
             new MagicSwordItem(COCExtendedWeaponTiers.WORLD_BREAKER, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.WORLD_BREAKER)),
                     SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.EARTHQUAKE_SPELL, 11))));
-    //Worldbreaker
+    //Ender Khopesh
+    public static final DeferredHolder<Item, Item> ENDER_KHOPESH = ITEMS.register("ender_khopesh", EnderKhopeshItem::new);
+    //Hawthorn Edge
+    public static final DeferredHolder<Item, Item> HAWTHORN_EDGE = ITEMS.register("hawthorn_edge", HawthornEdgeItem::new);
+
+    //Sculk Slicer
     public static final DeferredHolder<Item, Item> SCULK_SLICER = ITEMS.register("sculk_slicer", () ->
             new MagicSwordItem(COCExtendedWeaponTiers.SCULK_SLICER, ItemPropertiesHelper.equipment().rarity(Rarity.RARE).attributes(ExtendedSwordItem.createAttributes(COCExtendedWeaponTiers.SCULK_SLICER)),
                     SpellDataRegistryHolder.of(new SpellDataRegistryHolder(SpellRegistry.SONIC_BOOM_SPELL, 4))));

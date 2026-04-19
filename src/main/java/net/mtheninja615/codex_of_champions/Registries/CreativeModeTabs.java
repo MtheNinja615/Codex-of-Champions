@@ -51,7 +51,9 @@ public class CreativeModeTabs {
                         output.accept(ItemRegistries.SOULFIRE_GREATSWORD.get());
                         output.accept(ItemRegistries.DEATHFIRE_GREATSWORD.get());
                         output.accept(ItemRegistries.SCULK_SLICER.get());
+                        output.accept(ItemRegistries.ENDER_KHOPESH.get());
                         output.accept(ItemRegistries.WORLDBREAKER.get());
+                        output.accept(ItemRegistries.HAWTHORN_EDGE.get());
                         output.accept(ItemRegistries.THUNDERBRINGER.get());
                     //Staves
                         output.accept(ItemRegistries.NAMELESS_STAFF.get());

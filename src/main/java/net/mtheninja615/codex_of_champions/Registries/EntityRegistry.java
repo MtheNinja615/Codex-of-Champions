@@ -6,6 +6,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.mtheninja615.codex_of_champions.CodexOfChampions;
 import net.mtheninja615.codex_of_champions.entities.mobs.spellcastingmobs.PaladinEntity;
+import net.mtheninja615.codex_of_champions.entities.spells.iron_pulce.Ingot;
 import net.mtheninja615.codex_of_champions.entities.spells.petal_blizzard.PetalBlizzard;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -33,12 +34,24 @@ public class EntityRegistry {
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(CodexOfChampions.MODID, "paladin").toString()));
 
+    //SPELLS
+
+
+
     // Petal Blizzard
     public static final DeferredHolder<EntityType<?>, EntityType<PetalBlizzard>> PETAL_BLIZZARD =
             ENTITIES.register("petal_blizzard", () -> EntityType.Builder.<PetalBlizzard>of(PetalBlizzard::new, MobCategory.MISC)
                     .sized(3f, 8.5f)
                     .clientTrackingRange(4)
                     .build(ResourceLocation.fromNamespaceAndPath(CodexOfChampions.MODID, "petal_blizzard").toString())
+            );
+
+    // Ingot
+    public static final DeferredHolder<EntityType<?>, EntityType<Ingot>> INGOT =
+            ENTITIES.register("ingot", () -> EntityType.Builder.<Ingot>of(Ingot::new, MobCategory.MISC)
+                    .sized(0.5f, 0.3f)
+                    .clientTrackingRange(4)
+                    .build(ResourceLocation.fromNamespaceAndPath(CodexOfChampions.MODID, "ingot").toString())
             );
 
 

@@ -6,11 +6,13 @@ import dev.shadowsoffire.apothic_attributes.api.ALObjects;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.curios.SimpleDescriptiveCurio;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.acetheeldritchking.aces_spell_utils.utils.ASRarities;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ItemStack;
 import top.theillusivec4.curios.api.SlotContext;
 
@@ -24,7 +26,7 @@ public class RoyalRoseCurio extends SimpleDescriptiveCurio {
         Multimap<Holder<Attribute>, AttributeModifier> attr = LinkedHashMultimap.create();
         //The attributes of the curio
         attr.put(AttributeRegistry.ENDER_SPELL_POWER, new AttributeModifier(id, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
-        attr.put(ALObjects.Attributes.CRIT_DAMAGE, new AttributeModifier(id, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+        attr.put(ASAttributeRegistry.MANA_STEAL, new AttributeModifier(id, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
         return attr;
     }
 }

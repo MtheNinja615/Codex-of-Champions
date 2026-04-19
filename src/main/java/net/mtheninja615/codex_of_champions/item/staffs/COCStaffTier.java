@@ -1,6 +1,8 @@
 package net.mtheninja615.codex_of_champions.item.staffs;
 
+import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
+import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.item.weapons.IronsWeaponTier;
 

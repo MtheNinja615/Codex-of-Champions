@@ -28,7 +28,7 @@ public class CodexSchoolRegistry  {
 
     public static final ResourceLocation MAGNETIC_RESOURCE = CodexOfChampions.id("magnetic");
 
-    public static final Supplier<SchoolType> ASTRAL = registerSchool(new SchoolType
+    public static final Supplier<SchoolType> MAGNETIC = registerSchool(new SchoolType
             (
                     MAGNETIC_RESOURCE,
                     CodexTags.MAGNETIC_FOCUS,

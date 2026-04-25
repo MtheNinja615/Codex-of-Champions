@@ -81,6 +81,42 @@ public class CreativeModeTabs {
                         output.accept(ItemRegistries.BLOSSOM_CLOAK_ARMOR.get());
                         output.accept(ItemRegistries.BLOSSOM_CLOAK_LEGGINGS.get());
                         output.accept(ItemRegistries.BLOSSOM_CLOAK_BOOTS.get());
+
+                        output.accept(ItemRegistries.PHOENIX_HOOD.get());
+                        output.accept(ItemRegistries.PHOENIX_ARMOR.get());
+                        output.accept(ItemRegistries.PHOENIX_LEGGINGS.get());
+                        output.accept(ItemRegistries.PHOENIX_BOOTS.get());
+
+                        output.accept(ItemRegistries.GALA_HELMET.get());
+                        output.accept(ItemRegistries.GALA_ARMOR.get());
+                        output.accept(ItemRegistries.GALA_LEGGINGS.get());
+                        output.accept(ItemRegistries.GALA_BOOTS.get());
+
+                        output.accept(ItemRegistries.CRUSADER_HELMET.get());
+                        output.accept(ItemRegistries.CRUSADER_ARMOR.get());
+                        output.accept(ItemRegistries.CRUSADER_LEGGINGS.get());
+                        output.accept(ItemRegistries.CRUSADER_BOOTS.get());
+
+                        output.accept(ItemRegistries.MONSTROSITY_HELMET.get());
+                        output.accept(ItemRegistries.MONSTROSITY_ARMOR.get());
+                        output.accept(ItemRegistries.MONSTROSITY_LEGGINGS.get());
+                        output.accept(ItemRegistries.MONSTROSITY_BOOTS.get());
+
+                        output.accept(ItemRegistries.FROSTBITE_HELMET.get());
+                        output.accept(ItemRegistries.FROSTBITE_ARMOR.get());
+                        output.accept(ItemRegistries.FROSTBITE_LEGGINGS.get());
+                        output.accept(ItemRegistries.FROSTBITE_BOOTS.get());
+
+                        output.accept(ItemRegistries.LIGTNING_HERALD_HELMET.get());
+                        output.accept(ItemRegistries.LIGTNING_HERALD_ARMOR.get());
+                        output.accept(ItemRegistries.LIGTNING_HERALD_LEGGINGS.get());
+                        output.accept(ItemRegistries.LIGTNING_HERALD_BOOTS.get());
+
+                        output.accept(ItemRegistries.WARDEN_HUNTER_HELMET.get());
+                        output.accept(ItemRegistries.WARDEN_HUNTER_ARMOR.get());
+                        output.accept(ItemRegistries.WARDEN_HUNTER_LEGGINGS.get());
+                        output.accept(ItemRegistries.WARDEN_HUNTER_BOOTS.get());
+
                     })
                     .build());
 
